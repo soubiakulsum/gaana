@@ -2,4 +2,6 @@
     <string name="app_name">project_gaana</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gaana">gaana</string>
+    <string name="popular_in_hindi">Popular In Hindi</string>
 </resources>
