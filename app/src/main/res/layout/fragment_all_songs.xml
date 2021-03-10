@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AllSongsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="Top Picks"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <com.ryan.rv_gallery.GalleryRecyclerView
+            android:id="@+id/TopPicksRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:helper="LinearSnapHelper">
+
+        </com.ryan.rv_gallery.GalleryRecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="@string/popular_in_hindi"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HindiRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="@string/top_charts"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/TopChartsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="@string/trending_songs"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/TrendingSongsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="@string/radio"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RadioRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="@string/discover"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/DiscoverRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sara_bold"
+            android:text="@string/popular_in_english"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/EnglishRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</ScrollView>
