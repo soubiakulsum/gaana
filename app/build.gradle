@@ -2,6 +2,12 @@ plugins {
     id 'com.android.application'
 }
 
+ext {
+    PUBLISH_GROUP_ID = 'com.github.mhrjnamar'
+    PUBLISH_ARTIFACT_ID = 'neatcircleimage'
+    PUBLISH_VERSION = '0.0.2'
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -38,4 +44,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compile 'com.ryan.rv_gallery:rv-gallery:1.1.2'
+
+
 }

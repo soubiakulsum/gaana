@@ -1,4 +1,4 @@
-package com.example.project_gaana;
+package com.example.project_gaana.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.project_gaana.R;
+import com.example.project_gaana.model.TopPicksModel;
+import com.example.project_gaana.viewHolder.PicksViewHolder;
 
 import java.util.List;
 

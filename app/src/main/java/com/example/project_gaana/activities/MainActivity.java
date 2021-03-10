@@ -1,12 +1,15 @@
 package com.example.project_gaana.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.project_gaana.R;
 import com.example.project_gaana.adapter.HomeAdapter;
@@ -37,5 +40,26 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         Pager = findViewById(R.id.Pager);
         HomeTabLayout = findViewById(R.id.HomeTabLayout);
+    }
+
+    public class WrapContentHeightViewPager extends ViewPager{
+
+        public WrapContentHeightViewPager(@NonNull Context context) {
+            super(context);
+        }
+        @Override
+        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+            int height = 0;
+            for (int i = 0; i < getChildCount(); i++) {
+                View child = getChildAt(i);
+                child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
+                int h = child.getMeasuredHeight();
+                if (h > height) height = h;
+            }
+            heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        }
     }
 }

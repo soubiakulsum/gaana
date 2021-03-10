@@ -7,17 +7,18 @@
     tools:context=".activities.MainActivity">
 
     <EditText
-        android:id="@+id/etSearch"
+        android:id="@+id/etSearch2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
-        android:hint="Search Songs,PlayLists a..."
         android:layout_marginEnd="20dp"
         android:background="@drawable/search_bg"
         android:backgroundTint="#DFE5E4"
         android:drawablePadding="10dp"
+        android:hint="Search Songs,PlayLists a..."
         android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -26,50 +27,60 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="@+id/etSearch"
+        app:layout_constraintEnd_toEndOf="@+id/etSearch2"
         app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etSearch"
+        app:layout_constraintTop_toTopOf="@+id/etSearch2"
         app:srcCompat="@drawable/ic_voice" />
 
+<!--    <LinearLayout-->
+<!--        android:id="@+id/HomeLinear"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginBottom="55dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-    <LinearLayout
-        android:id="@+id/HomeLinear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/etSearch">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/HomeTabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@color/white"
             app:tabGravity="center"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:layout_constraintTop_toBottomOf="@+id/etSearch2"
+            app:layout_constraintStart_toStartOf="parent"
             app:tabIndicatorColor="#E74C3C"
-            android:layout_gravity="center"
             app:tabIndicatorHeight="3dp"
             app:tabMode="scrollable" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/Pager"
+            app:layout_constraintTop_toBottomOf="@id/HomeTabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="500dp" />
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
+
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/constraintLayout"
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp">
+            android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/navi1"
                 android:layout_width="wrap_content"
@@ -82,6 +93,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
+
             <TextView
                 android:id="@+id/naviText1"
                 android:layout_width="wrap_content"
@@ -94,6 +106,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/navi1"
                 app:layout_constraintTop_toBottomOf="@+id/navi1" />
+
             <ImageView
                 android:id="@+id/navi2"
                 android:layout_width="wrap_content"
@@ -106,6 +119,7 @@
                 app:layout_constraintStart_toEndOf="@+id/navi1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
+
             <TextView
                 android:id="@+id/naviText2"
                 android:layout_width="wrap_content"
@@ -117,6 +131,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/navi2"
                 app:layout_constraintTop_toBottomOf="@+id/navi2" />
+
             <ImageView
                 android:id="@+id/navi3"
                 android:layout_width="wrap_content"
@@ -129,6 +144,7 @@
                 app:layout_constraintStart_toEndOf="@+id/navi2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
+
             <TextView
                 android:id="@+id/naviText3"
                 android:layout_width="wrap_content"
@@ -140,6 +156,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/navi3"
                 app:layout_constraintTop_toBottomOf="@+id/navi3" />
+
             <ImageView
                 android:id="@+id/navi4"
                 android:layout_width="wrap_content"
@@ -152,6 +169,7 @@
                 app:layout_constraintStart_toEndOf="@+id/navi3"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
+
             <TextView
                 android:id="@+id/naviText4"
                 android:layout_width="wrap_content"
