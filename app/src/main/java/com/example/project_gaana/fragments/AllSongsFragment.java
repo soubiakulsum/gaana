@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.project_gaana.PopularEnglishAdapter;
 import com.example.project_gaana.PopularEnglishModel;
 import com.example.project_gaana.adapter.DiscoverAdapter;
 import com.example.project_gaana.adapter.RadioAdapter;
@@ -49,6 +50,7 @@ public class AllSongsFragment extends Fragment {
     private RecyclerView TrendingSongsRecycler;
     private RecyclerView RadioRecycler;
     private RecyclerView DiscoverRecycler;
+    private RecyclerView EnglishRecycler;
 
 
 
@@ -86,7 +88,35 @@ public class AllSongsFragment extends Fragment {
         setRadioData();
         buildDiscoverData();
         setDiscoverData();
+        buildPopularEnglishData();
+        setPopularEnglishData();
 
+    }
+
+    private void buildPopularEnglishData() {
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.alone,"On My Way","Alan Walker","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.sucker,"Sucker","Jonas Brothers","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.senorita,"Senorita","Shawn Mendes","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.darkside,"Dark Side","Alan Walker","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.girlslikeu,"Girls Like u","Maroon 5","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.withoutme,"With Out Me","Halsey","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.holdon,"Hold On","Alan Walker","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.yummy,"Yummy","Justin Bei","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.happier,"Happier","Marshmello","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.sunflower,"Sunflower","Post Mel.","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.rightnow,"Right On","Nick Jon..","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.cantgetenough,"Cant get eno..","Selena..","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.highonlife,"High On Li..","Martin","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.memories,"Memories","Maroon","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.hope,"Hope","The Chain..","83M+ Plays"));
+
+    }
+
+    private void setPopularEnglishData() {
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,RecyclerView.HORIZONTAL,false);
+        PopularEnglishAdapter popularEnglishAdapter = new PopularEnglishAdapter(popularEnglishModelList);
+        EnglishRecycler.setLayoutManager(gridLayoutManager);
+        EnglishRecycler.setAdapter(popularEnglishAdapter);
     }
 
     private void buildDiscoverData() {
@@ -254,5 +284,6 @@ public class AllSongsFragment extends Fragment {
         TrendingSongsRecycler = view.findViewById(R.id.TrendingSongsRecycler);
         RadioRecycler = view.findViewById(R.id.RadioRecycler);
         DiscoverRecycler = view.findViewById(R.id.DiscoverRecycler);
+        EnglishRecycler = view.findViewById(R.id.EnglishRecycler);
     }
 }
