@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">project_gaana</string>
+    <string name="search_your_tune">Search Your Tune</string>
+    <string name="fetch_data">Fetch Data</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="gaana">gaana</string>
