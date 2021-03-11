@@ -71,11 +71,11 @@
             app:tabIndicatorHeight="3dp"
             app:tabMode="scrollable" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/Pager"
-            app:layout_constraintTop_toBottomOf="@id/HomeTabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="500dp" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/Pager"
+        app:layout_constraintTop_toBottomOf="@id/HomeTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
     <LinearLayout
         android:id="@+id/fbContainer"
         android:orientation="vertical"
@@ -111,8 +111,8 @@
                 android:id="@+id/navi1"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:padding="5dp"
                 android:adjustViewBounds="true"
+                android:paddingTop="8dp"
                 android:src="@drawable/ic_home"
                 app:layout_constraintBottom_toTopOf="@+id/naviText1"
                 app:layout_constraintEnd_toStartOf="@+id/navi2"
@@ -127,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
                 android:text="Home"
+                android:textSize="14sp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/navi1"
@@ -138,7 +139,7 @@
                 android:id="@+id/navi2"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:padding="5dp"
+                android:paddingTop="8dp"
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_podcast"
                 app:layout_constraintBottom_toTopOf="@+id/naviText2"
@@ -151,22 +152,36 @@
             <TextView
                 android:id="@+id/naviText2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:fontFamily="@font/medium"
                 android:text="Padcast"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/navi2"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/navi2"
                 app:layout_constraintTop_toBottomOf="@+id/navi2" />
 
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:src="@drawable/ic_flash_symbol"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/naviText3"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/navi4"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/navi2"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintVertical_chainStyle="packed" />-->
+
             <ImageView
                 android:id="@+id/navi3"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:padding="5dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/ic_video_player"
+                android:paddingTop="8dp"
+                android:src="@drawable/ic_flash_symbol"
                 app:layout_constraintBottom_toTopOf="@+id/naviText3"
                 app:layout_constraintEnd_toStartOf="@+id/navi4"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -174,13 +189,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
 
-
             <TextView
                 android:id="@+id/naviText3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
-                android:text="HotShots"
+                android:text="Buzz"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/navi3"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -191,9 +206,9 @@
                 android:id="@+id/navi4"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:padding="5dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/ic_musical_notes"
+                android:paddingTop="8dp"
+                android:src="@drawable/ic_headphones"
                 app:layout_constraintBottom_toTopOf="@+id/naviText4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -207,6 +222,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
                 android:text="My Music"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/navi4"
                 app:layout_constraintHorizontal_bias="0.5"
