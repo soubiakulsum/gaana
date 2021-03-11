@@ -18,6 +18,8 @@ import com.example.project_gaana.R;
 import com.example.project_gaana.adapter.HomeAdapter;
 import com.example.project_gaana.fragments.BuzzFragment;
 import com.example.project_gaana.fragments.BuzzzFragment;
+import com.example.project_gaana.fragments.MusicFragment;
+import com.example.project_gaana.fragments.PodcastFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout HomeTabLayout;
     private ImageButton mBTNSettings;
     private ImageView Mnavi3;
+    private ImageView Mnavi4;
+    private ImageView Mnavi2;
+    private ImageView Mnavi1;
+
     private FragmentManager fragmentManager;
 
 
@@ -51,7 +57,33 @@ public class MainActivity extends AppCompatActivity {
         HomeTabLayout = findViewById(R.id.HomeTabLayout);
         mBTNSettings = findViewById(R.id.btnSettings);
         Mnavi3 = findViewById(R.id.navi3);
+        Mnavi4 = findViewById(R.id.navi4);
+        Mnavi2 = findViewById(R.id.navi2);
+        Mnavi1 = findViewById(R.id.navi1);
+
+
+
         fragmentManager = getSupportFragmentManager();
+
+        Mnavi1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        Mnavi2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddPodcast();
+            }
+        });
+        Mnavi4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddMusic();
+            }
+        });
 
         Mnavi3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,10 +101,25 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void AddPodcast() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        PodcastFragment podcastFragment = new PodcastFragment();
+        fragmentTransaction.replace(R.id.fcContainer, podcastFragment, "Fragme3").commit();
+
+
+    }
+
+    private void AddMusic() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        MusicFragment musicFragment = new MusicFragment();
+        fragmentTransaction.replace(R.id.fcContainer, musicFragment, "Fragme2").commit();
+
+    }
+
     private void AddBuzz() {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         BuzzFragment buzzFragment = new BuzzFragment();
-        fragmentTransaction.add(R.id.fbContainer, buzzFragment, "Fragme").commit();
+        fragmentTransaction.replace(R.id.fcContainer, buzzFragment, "Fragme").commit();
     }
 
     public class WrapContentHeightViewPager extends ViewPager {

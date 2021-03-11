@@ -1,6 +1,7 @@
 package com.example.project_gaana.buzz;
 
 public class Buzz {
+
     private String like ;
     private String daysAgo;
     private String article;

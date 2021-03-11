@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,13 +16,15 @@
             android:id="@+id/buzzlikeshare"
             android:layout_width="wrap_content"
             android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/buzzVideoView"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/buzzlike"
-                android:layout_width="50dp"
+                android:layout_width="70dp"
+                android:drawablePadding="5dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:drawableStart="@drawable/ic_baseline_thumb_up_24" />
@@ -42,6 +44,8 @@
             android:id="@+id/twodaysago"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:drawablePadding="5dp"
             android:layout_below="@id/buzzlikeshare"
             android:text="2 days ago "
             android:textColor="@color/black"
@@ -51,6 +55,7 @@
             android:id="@+id/buzzarticle"
             android:layout_width="match_parent"
             android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/twodaysago"
             android:text="Jasmin walia Bhasin , Aly Goni to feature in musi cvideo"
@@ -61,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/buzzarticle"
+            android:layout_marginStart="10dp"
             android:drawableStart="@drawable/ic_baseline_play_arrow_24"
             android:text="Read Full Article"
             android:textColor="#E70A0A"

@@ -23,23 +23,23 @@ import java.util.List;
 public class BuzzzFragment extends Fragment {
 
 
-//    private List<Buzz> buzzList = new ArrayList<>();
-//    private RecyclerView mRecyclerView;
-//
-//    public BuzzzFragment() {
-//    }
+    private List<Buzz> buzzList = new ArrayList<>();
+    private RecyclerView mRecyclerView;
 
-//    public static BuzzzFragment newINstance() {
-//        BuzzzFragment buzzzFragment = new BuzzzFragment();
-//        return buzzzFragment;
-//    }
+    public BuzzzFragment() {
+    }
+
+    public static BuzzzFragment newINstance() {
+        BuzzzFragment buzzzFragment = new BuzzzFragment();
+        return buzzzFragment;
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        mRecyclerView = view.findViewById(R.id.rvRecyclerView);
-//        BuildRecyclerData();
-//        setRecyclerAdapter();
+        mRecyclerView = view.findViewById(R.id.rvRecyclerView);
+        BuildRecyclerData();
+        setRecyclerAdapter();
     }
 
     @Override
@@ -48,24 +48,24 @@ public class BuzzzFragment extends Fragment {
 
 
     }
-//
-//    private void BuildRecyclerData() {
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-//        mRecyclerView.setLayoutManager(linearLayoutManager);
-//        BuzzAdapter buzzAdapter = new BuzzAdapter(buzzList);
-//        mRecyclerView.setAdapter(buzzAdapter);
-//    }
-//
-//    private void setRecyclerAdapter() {
-//        for (int i = 0; i < 50; i++) {
-//            if (i % 2 == 0) {
-//                buzzList.add(new Buzz("2.4k", "2 days ago", "ldjdlijlikjklj   jikjkjdj jikjK", "know more"));
-//            }
-//
-//        }
-//
-//
-//    }
+
+    private void BuildRecyclerData() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        BuzzAdapter buzzAdapter = new BuzzAdapter(buzzList);
+        mRecyclerView.setAdapter(buzzAdapter);
+    }
+
+    private void setRecyclerAdapter() {
+        for (int i = 0; i < 50; i++) {
+            if (i % 2 == 0) {
+                buzzList.add(new Buzz("2.4k", "2 days ago", "ldjdlijlikjklj   jikjkjdj jikjK", "know more"));
+            }
+
+        }
+
+
+    }
 
 
 }
