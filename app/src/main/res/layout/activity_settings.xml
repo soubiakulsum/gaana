@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingsActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_left_arrow__1_"
+            android:padding="10dp" />
+
+
+        <TextView
+            android:id="@+id/tvFurniture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/imBack"
+            android:text="Settings"
+            android:textColor="#D2000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/svScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="550dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ppic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/user"
+                        app:civ_border_width="0dp" />
+
+                    <TextView
+                        android:id="@+id/txthello"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_toEndOf="@id/ppic"
+                        android:text="Hello "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txthello"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/ppic"
+                        android:text="You are a Free User"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#42545050" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                android:elevation="10dp"
+                android:padding="20dp"
+                app:cardCornerRadius="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlHotsShots"
+                    android:background="@drawable/gradient_background"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/smartphone"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/ic_smartphone" />
+
+                    <TextView
+                        android:id="@+id/myhotshots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@id/smartphone"
+                        android:text="My HotShots"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myhotshots"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@id/smartphone"
+                        android:text="Check your HotShots And followers"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="10dp"
+                android:padding="20dp"
+                app:cardCornerRadius="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CardCoinBalance"
+                    android:background="@drawable/gradient_blue"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/coinbalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Coin Balance"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/goldCoin"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/coinbalance"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="21dp"
+                        android:src="@drawable/coin"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/coinbalance"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/goldCoin"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llcoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/goldCoin"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/coinbalance"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="21dp"
+                            android:background="@drawable/circle_white"
+                            android:src="@drawable/wakefit"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/coinbalance"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/coin"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/coinbalance"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/coin"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/coinbalance"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/meddo"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/coinbalance"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/onenine"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llcoin"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="More Awesome rewards Available"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="5dp"
+                android:text="Quick Settings"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Reedeem Coupon"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Redeem coupon now to activate Gaana+ And Enjoy Ads free,
+HD music with unlimited downloads"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Subscribe for Gaana Plus"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="UNlimited Downloads, Ad free Experience, Stream Music in HD"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Notifications"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Gaana Launch Screen"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Night Mode"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Music Quality"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Ads"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Song Languages"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:paddingVertical="5dp"
+                android:text="Equalizer"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="5dp"
+                android:text="General Settings"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Music Playback Settings"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Gapless PLayback, Data Save Mode, Equalizer, Sleep, Music Timer"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Download And Sync Settings"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Go Offline, Smart Downloads, Download Quality etc"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Display  Settings"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Display Language, High Resolution Images, Night Mode Advanved settings"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Gaana Plus And Rewards"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Gaana Plus, Refer A Friend, Gaana Rewards, Reedem Coupon, Restore Purchase"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Application"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Push Notification, Rate App, Share App, Storage, About  Us"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="5dp"
+                android:text="Need Help?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_right_arrow__1_"
+                android:drawablePadding="5dp"
+                android:text="Help"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:fontFamily="@font/amaranth_bold_italic"
+                android:text="gaana"
+                android:textAlignment="center"
+                android:textColor="#EB0808"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                style="@style/Profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:text="v8.21.1"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#7D545050" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/horizontal"
+        android:paddingVertical="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:layout_weight="1"
+            android:text="Downolad Songs"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:layout_weight="1"
+            android:text="HD Audio Quality"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:text="Ad Free Music"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/red_button"
+        android:paddingHorizontal="25dp"
+        android:text="Buy Gaana Plus @ $1 Now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+
+
+
+</LinearLayout>

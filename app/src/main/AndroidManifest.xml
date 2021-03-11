@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
-        <activity android:name=".activities.PlayMusicActivity"></activity>
-        <activity android:name=".activities.DummyActivity">
-               </activity>
+        <activity android:name=".activities.SettingsActivity"></activity>
+        <activity android:name=".activities.PlayMusicActivity" />
+        <activity android:name=".activities.DummyActivity"></activity>
 
         <service
             android:name=".services.Empty"
@@ -21,17 +21,11 @@
             android:exported="true" />
 
         <activity android:name=".activities.MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
-
-
         </activity>
     </application>
 

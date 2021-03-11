@@ -8,8 +8,11 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.project_gaana.R;
 import com.example.project_gaana.adapter.HomeAdapter;
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager Pager;
     private TabLayout HomeTabLayout;
+    private ImageButton mBTNSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         Pager = findViewById(R.id.Pager);
         HomeTabLayout = findViewById(R.id.HomeTabLayout);
+        mBTNSettings   = findViewById(R.id.btnSettings);
+        mBTNSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SettingsActivity.class );
+                startActivity(intent);
+            }
+        });
     }
 
     public class WrapContentHeightViewPager extends ViewPager{
