@@ -1,10 +1,10 @@
 package com.example.project_gaana;
 
 import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class ResultsItem implements Serializable {
-
 	@SerializedName("wrapperType")
 	private String wrapperType;
 

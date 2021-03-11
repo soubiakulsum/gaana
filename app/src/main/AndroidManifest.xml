@@ -14,9 +14,22 @@
         <activity android:name=".activities.PlayMusicActivity">
 
         </activity>
-        <activity android:name=".activities.DummyActivity">
+        <activity android:name=".activities.DummyActivity"/>
+        <activity android:name=".activities.MyHotShots"></activity>
+        <activity android:name=".activities.SettingsActivity" />
 
-        </activity>
+
+
+        <service
+            android:name=".services.Empty"
+            android:enabled="true"
+            android:exported="true" />
+
+<!--        <activity android:name=".activities.MainActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--        </activity>-->
 
         <service
             android:name=".services.Empty"
