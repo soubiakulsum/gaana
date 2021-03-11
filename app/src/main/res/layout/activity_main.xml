@@ -76,7 +76,13 @@
             app:layout_constraintTop_toBottomOf="@id/HomeTabLayout"
             android:layout_width="match_parent"
             android:layout_height="500dp" />
-
+    <LinearLayout
+        android:id="@+id/fbContainer"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/HomeTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:ignore="MissingConstraints" />
 <!--    </LinearLayout>-->
 
 
@@ -157,6 +163,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
 
+
             <TextView
                 android:id="@+id/naviText3"
                 android:layout_width="wrap_content"
@@ -195,6 +202,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/navi4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
