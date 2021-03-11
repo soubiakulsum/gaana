@@ -6,18 +6,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.project_gaana.ItemClickListeners;
 import com.example.project_gaana.R;
 
 import java.io.IOException;
@@ -38,7 +35,7 @@ public class PlayMusicActivity extends AppCompatActivity {
 
     private Context mContext;
     private Activity mActivity;
-    ItemClickListeners itemClickListeners;
+//    ItemClickListeners itemClickListeners;
 
     ImageView btnPlayMusic;
 
@@ -73,13 +70,14 @@ public class PlayMusicActivity extends AppCompatActivity {
         tvGetSongName = findViewById(R.id.getSongName);
         btnPlayMusic = findViewById(R.id.btn_playmusic);
         btnPauseMusic = findViewById(R.id.btn_pausemusic);
-        tvSingerName=findViewById(R.id.SingerName);
+        tvSingerName = findViewById(R.id.SingerName);
+
 
         ivGetImage.setImageResource(getIntent().getIntExtra("image", 0));
 
         tvGetSongName.setText(getIntent().getStringExtra("songName"));
 
-        tvSingerName.setText(getIntent().getStringExtra("songName")+" by "+getIntent().getStringExtra("singerName"));
+        tvSingerName.setText(getIntent().getStringExtra("songName") + " by " + getIntent().getStringExtra("singerName"));
         tvSingerName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         tvSingerName.setSelected(true);
 
@@ -151,53 +149,57 @@ public class PlayMusicActivity extends AppCompatActivity {
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                if(mPlayer!=null && b){
-                    mPlayer.seekTo(i*1000);
+                if (mPlayer != null && b) {
+                    mPlayer.seekTo(i * 1000);
                 }
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
     }
 
-    protected void stopPlaying(){
-        if(mPlayer!=null){
+
+
+    protected void stopPlaying() {
+        if (mPlayer != null) {
             mPlayer.stop();
             mPlayer.release();
             mPlayer = null;
-            Toast.makeText(mContext,"Stop playing.", Toast.LENGTH_SHORT).show();
-            if(mHandler!=null){
+            Toast.makeText(mContext, "Stop playing.", Toast.LENGTH_SHORT).show();
+            if (mHandler != null) {
                 mHandler.removeCallbacks(mRunnable);
             }
         }
     }
 
-    protected void getAudioStats(){
-        int duration  = mPlayer.getDuration()/1000; // In milliseconds
-        int due = (mPlayer.getDuration() - mPlayer.getCurrentPosition())/1000;
+    protected void getAudioStats() {
+        int duration = mPlayer.getDuration() / 1000; // In milliseconds
+        int due = (mPlayer.getDuration() - mPlayer.getCurrentPosition()) / 1000;
         int pass = duration - due;
         mPass.setText("" + pass + " seconds");
         mDuration.setText("" + duration + " seconds");
         mDue.setText("" + due + " seconds");
     }
 
-    protected void initializeSeekBar(){
-        mSeekBar.setMax(mPlayer.getDuration()/1000);
+    protected void initializeSeekBar() {
+        mSeekBar.setMax(mPlayer.getDuration() / 1000);
         mRunnable = new Runnable() {
             @Override
             public void run() {
-                if(mPlayer!=null){
-                    int mCurrentPosition = mPlayer.getCurrentPosition()/1000; // In milliseconds
+                if (mPlayer != null) {
+                    int mCurrentPosition = mPlayer.getCurrentPosition() / 1000; // In milliseconds
                     mSeekBar.setProgress(mCurrentPosition);
                     getAudioStats();
                 }
-                mHandler.postDelayed(mRunnable,1000);
+                mHandler.postDelayed(mRunnable, 1000);
             }
         };
-        mHandler.postDelayed(mRunnable,1000);
+        mHandler.postDelayed(mRunnable, 1000);
     }
 }

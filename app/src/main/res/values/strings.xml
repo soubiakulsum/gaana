@@ -11,4 +11,14 @@
     <string name="radio">Radio</string>
     <string name="discover">Discover</string>
     <string name="popular_in_english">Popular In English</string>
+    <string name="gaana_videos">Gaana Videos</string>
+    <string name="shows_and_podcasts">Shows And Podcasts</string>
+    <string name="hey_music_lover">Hey Music Lover</string>
+    <string name="top_hits_in_hindi">Top Hits In Hindi</string>
+    <string name="top_hits_in_telugu">Top Hits In Telugu</string>
+    <string name="_2000s_hits">2000s Hits</string>
+    <string name="_90s_hits">90s Hits</string>
+    <string name="retro_hits">Retro Hits</string>
+    <string name="top_fresh_playlist">Top Fresh Playlist</string>
+    <string name="international_hits">International Hits</string>
 </resources>

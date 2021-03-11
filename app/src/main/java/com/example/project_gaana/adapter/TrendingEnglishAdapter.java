@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.project_gaana.DataModel.TrendingEnglishSongModel;
 import com.example.project_gaana.ItemClickListeners;
 import com.example.project_gaana.R;
+import com.example.project_gaana.fragments.TopPicksFragment;
 import com.example.project_gaana.viewHolder.TrendingEnglishSongHolder;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class TrendingEnglishAdapter extends RecyclerView.Adapter<TrendingEnglish
    ItemClickListeners itemClickListeners;
 
     List<TrendingEnglishSongModel> trendingEnglishSongModels = new ArrayList<>();
-    public TrendingEnglishAdapter(List<TrendingEnglishSongModel> trendingEnglishSongModels, ItemClickListeners itemClickListeners) {
+    public TrendingEnglishAdapter(List<TrendingEnglishSongModel> trendingEnglishSongModels, TopPicksFragment itemClickListeners) {
 
         this.trendingEnglishSongModels=trendingEnglishSongModels;
         this.itemClickListeners=itemClickListeners;
