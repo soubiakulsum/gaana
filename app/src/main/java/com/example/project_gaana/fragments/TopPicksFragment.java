@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project_gaana.DataModel.RecommendedModel;
 import com.example.project_gaana.DataModel.TrendingEnglishSongModel;
 import com.example.project_gaana.ItemClickListeners;
 import com.example.project_gaana.R;
@@ -193,6 +194,11 @@ public class TopPicksFragment extends Fragment implements ItemClickListeners {
    //     Toast.makeText(mContext, ""+position+"", Toast.LENGTH_SHORT).show();
 
         GetSongUrl(position);
+
+    }
+
+    @Override
+    public void OnItemClickListeners(int position, RecommendedModel recommendedModel) {
 
     }
 

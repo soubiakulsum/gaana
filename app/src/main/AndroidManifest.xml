@@ -7,17 +7,16 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Gaana"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
-        <activity android:name=".activities.PlayMusicActivity"></activity>
-        <activity android:name=".activities.DummyActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".activities.HotshotsActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity android:name=".activities.PlayMusicActivity" />
+        <activity android:name=".activities.DummyActivity">
+
         </activity>
 
         <service
@@ -25,7 +24,17 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.SearchActivity" >
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
+
+
     </application>
 
 </manifest>
