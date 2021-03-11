@@ -69,7 +69,7 @@ public class AllSongsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_songs, container, false);
+        return inflater.inflate(R.layout.   fragment_all_songs, container, false);
     }
 
     @Override
@@ -96,7 +96,7 @@ public class AllSongsFragment extends Fragment {
     private void buildPopularEnglishData() {
         popularEnglishModelList.add(new PopularEnglishModel(R.drawable.alone,"On My Way","Alan Walker","83M+ Plays"));
         popularEnglishModelList.add(new PopularEnglishModel(R.drawable.sucker,"Sucker","Jonas Brothers","83M+ Plays"));
-        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.senorita,"Senorita","Shawn Mendes","83M+ Plays"));
+        popularEnglishModelList.add(new PopularEnglishModel(R.drawable.senoritaa,"Senorita","Shawn Mendes","83M+ Plays"));
         popularEnglishModelList.add(new PopularEnglishModel(R.drawable.darkside,"Dark Side","Alan Walker","83M+ Plays"));
         popularEnglishModelList.add(new PopularEnglishModel(R.drawable.girlslikeu,"Girls Like u","Maroon 5","83M+ Plays"));
         popularEnglishModelList.add(new PopularEnglishModel(R.drawable.withoutme,"With Out Me","Halsey","83M+ Plays"));
@@ -239,7 +239,7 @@ public class AllSongsFragment extends Fragment {
 
     private void buildHindiSongsData() {
         hindiModelList.add(new HindiModel(R.drawable.filhaal,"Filhaal","251M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.ghungroo,"Ghungroo","351M+ Plays"));
+        hindiModelList.add(new HindiModel(R.drawable.ghungrooo,"Ghungroo","351M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.bekhayali,"Bekhayali","256M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun,"Dollar Gandh..","51M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.garmi,"Garmi","31M+ Plays"));
@@ -249,7 +249,7 @@ public class AllSongsFragment extends Fragment {
         hindiModelList.add(new HindiModel(R.drawable.shaayad,"Shayad","500M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.tumhiaana,"Tumhi Aana","351M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.vaaste,"Vaaste","251M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.ghungroo,"Ghungroo","351M+ Plays"));
+        hindiModelList.add(new HindiModel(R.drawable.ghungrooo,"Ghungroo","351M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.bekhayali,"Bekhayali","461M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun,"Dollar Gandh..","351M+ Plays"));
         hindiModelList.add(new HindiModel(R.drawable.garmi,"Garmi","351M+ Plays"));
