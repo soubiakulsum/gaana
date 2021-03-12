@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,6 +11,13 @@
             android:id="@+id/buzzVideoView"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:id="@+id/videoProgressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="190dp"
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:id="@+id/buzzlikeshare"
@@ -56,9 +63,11 @@
             android:layout_width="match_parent"
             android:layout_margin="5dp"
             android:layout_marginStart="15dp"
+            android:singleLine="true"
+            android:paddingTop="10dp"
+            android:scrollHorizontally="true"
             android:layout_height="40dp"
             android:layout_below="@id/twodaysago"
-            android:text="Jasmin walia Bhasin , Aly Goni to feature in musi cvideo"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

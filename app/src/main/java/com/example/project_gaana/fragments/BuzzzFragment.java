@@ -39,7 +39,7 @@ public class BuzzzFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mRecyclerView = view.findViewById(R.id.rvRecyclerView);
         BuildRecyclerData();
-        setRecyclerAdapter();
+    //    setRecyclerAdapter();
     }
 
     @Override
@@ -56,16 +56,12 @@ public class BuzzzFragment extends Fragment {
         mRecyclerView.setAdapter(buzzAdapter);
     }
 
-    private void setRecyclerAdapter() {
-        for (int i = 0; i < 50; i++) {
-            if (i % 2 == 0) {
-                buzzList.add(new Buzz("2.4k", "2 days ago", "ldjdlijlikjklj   jikjkjdj jikjK", "know more"));
-            }
+//    private void setRecyclerAdapter() {
+//        for (int i = 0; i < 50; i++) {
+//            if (i % 2 == 0) {
+//                buzzList.add(new Buzz("2.4k", "2 days ago", "ldjdlijlikjklj   jikjkjdj jikjK", "know more"));
+//            }
 
         }
 
 
-    }
-
-
-}
