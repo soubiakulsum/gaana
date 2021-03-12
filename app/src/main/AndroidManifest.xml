@@ -25,12 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PlayMusicActivity" />
-        <activity android:name=".activities.DummyActivity" />
-        <activity android:name=".activities.MyHotShots" />
-        <activity android:name=".activities.ContinueWithPhoneNumber" />
-        <activity android:name=".activities.HotshotsActivity" />
-        <activity android:name=".activities.SearchSongActivity" />
+<!--        <activity android:name=".activities.PlayMusicActivity" />-->
+<!--        <activity android:name=".activities.DummyActivity" />-->
+<!--        <activity android:name=".activities.MyHotShots" />-->
+<!--        <activity android:name=".activities.ContinueWithPhoneNumber" />-->
+<!--        <activity android:name=".activities.HotshotsActivity" />-->
+<!--        <activity android:name=".activities.SearchSongActivity" />-->
         <activity android:name=".activities.SettingsActivity" />
 
         <service
@@ -62,13 +62,13 @@
 
         <activity android:name=".activities.MainActivity"></activity>
 
-        <activity android:name=".activities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--        <activity android:name=".activities.MainActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
     </application>
 
 </manifest>
