@@ -16,6 +16,8 @@
         <activity android:name=".activities.HotshotsActivity"></activity>
         <activity android:name=".activities.SearchSongActivity"></activity>
         <activity android:name=".activities.EnterNumber"></activity>
+        <activity android:name=".activities.GetOTP"></activity>
+
         <activity android:name=".activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
