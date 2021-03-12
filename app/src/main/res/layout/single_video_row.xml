@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:id="@+id/VideoView"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/whatsapp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="10sp"
+            android:layout_marginTop="160dp"
+            android:textAlignment="textEnd"
+            android:paddingEnd="45dp"
+            android:text="4.5k"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/download"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="30dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="10sp"
+            android:layout_marginTop="250dp"
+            android:textAlignment="textEnd"
+            android:paddingEnd="45dp"
+            android:text="23k"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/like"
+            android:layout_marginTop="290dp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="30dp"/>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/create"
+            android:layout_marginTop="570dp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="30dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="10sp"
+            android:layout_marginTop="330dp"
+            android:textAlignment="textEnd"
+            android:paddingEnd="45dp"
+            android:text="353k"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/comment"
+            android:layout_marginTop="370dp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="30dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="10sp"
+            android:layout_marginTop="410dp"
+            android:textAlignment="textEnd"
+            android:paddingEnd="45dp"
+            android:text="3.5k"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/speaker"
+            android:layout_marginTop="420dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_height="30dp"/>
+
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/videoProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="480dp"
+        android:paddingStart="30dp"
+        android:text="Header Text"
+        android:id="@+id/textVideoTitle"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_marginTop="525dp"
+
+        android:paddingStart="30dp"
+        android:textColor="@color/white"
+        android:id="@+id/textVideoDescription"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:textSize="14sp"
+        android:text="This is Description"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="572dp"
+            android:paddingStart="60dp"
+            android:textColor="@color/white"
+            android:text="Create HotShot with this sound"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_marginTop="570dp"
+
+            android:textColor="@color/white"
+            android:src="@drawable/add_folder"
+            android:layout_height="20dp"/>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
