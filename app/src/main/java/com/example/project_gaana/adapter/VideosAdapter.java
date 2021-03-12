@@ -1,5 +1,6 @@
 package com.example.project_gaana.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +17,19 @@ import java.util.List;
 public class VideosAdapter extends RecyclerView.Adapter<VideosViewHolder> {
     private List<VediosModel> vediosModelList;
 
-    public VideosAdapter(List<VediosModel> vediosModelList) {
+    Context context;
+
+    public VideosAdapter(List<VediosModel> vediosModelList,Context context) {
         this.vediosModelList = vediosModelList;
+
+        this.context=context;
     }
 
     @NonNull
     @Override
     public VideosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.vedios_iteem_layout, parent, false);
-        return new VideosViewHolder(view);
+        return new VideosViewHolder(view,context);
     }
 
     @Override

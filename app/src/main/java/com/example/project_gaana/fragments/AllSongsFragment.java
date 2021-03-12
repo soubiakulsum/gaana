@@ -133,24 +133,24 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
     private void setVideoData() {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        VideosAdapter videosAdapter = new VideosAdapter(vediosModelList);
+        VideosAdapter videosAdapter = new VideosAdapter(vediosModelList,getContext());
         VideoRecycler.setLayoutManager(linearLayoutManager);
         VideoRecycler.setAdapter(videosAdapter);
     }
 
     private void buildVideoData() {
-        vediosModelList.add(new VediosModel(R.drawable.beautiful,"Beautiful People","Ed Shereen,khalid"));
-        vediosModelList.add(new VediosModel(R.drawable.binidnglights,"Blinding Nights","Ed Shereen"));
-        vediosModelList.add(new VediosModel(R.drawable.senoritaaa,"Senorita","Shawn Mendes,Camila ca.."));
-        vediosModelList.add(new VediosModel(R.drawable.ringtone,"RingTone","Preetinder"));
-        vediosModelList.add(new VediosModel(R.drawable.ghungrooooo,"Ghungroo","Arjith Singh,Vish.."));
-        vediosModelList.add(new VediosModel(R.drawable.goabeach,"Goa Beach","Tony Kakkar,Neha k.."));
-        vediosModelList.add(new VediosModel(R.drawable.jannath,"Jannath","Ed Shereen"));
-        vediosModelList.add(new VediosModel(R.drawable.yummy,"Yummy","Justin Beiber"));
-        vediosModelList.add(new VediosModel(R.drawable.galkarke,"Gal Karke","Asees Kaur"));
-        vediosModelList.add(new VediosModel(R.drawable.jonasbrothers,"Sucker","Jonas Brother"));
-        vediosModelList.add(new VediosModel(R.drawable.lehenga,"Lehenga","Ed Shereen"));
-        vediosModelList.add(new VediosModel(R.drawable.kalla,"Kalla Sohna Nai","Neha Kakkar"));
+        vediosModelList.add(new VediosModel(R.drawable.beautiful,"Beautiful People","Ed Shereen,khalid","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Beautiful%20People%20feat%20Khalid%20Official%20Video_360p.mp4?alt=media&token=1a24efe0-e586-4a03-a687-befb205f48f6"));
+        vediosModelList.add(new VediosModel(R.drawable.binidnglights,"Blinding Nights","Ed Shereen","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
+        vediosModelList.add(new VediosModel(R.drawable.senoritaaa,"Senorita","Shawn Mendes,Camila ca..","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Shawn%20Mendes%20Camila%20Cabello%20%20Se%C3%B1orita_360p.mp4?alt=media&token=987ce87b-0154-46f8-9182-c3ea05cdcae5"));
+        vediosModelList.add(new VediosModel(R.drawable.ringtone,"RingTone","Preetinder","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20RINGTONE%20%20Jannat%20Zubair%20%20Siddharth%20Nigam%20%20Preetinder%20%20Rajat%20Nagpal%20%20Vicky%20Sandhu%20%20Anshul%20Garg_360p.mp4?alt=media&token=ef833625-fce9-464f-8555-71f3fff54bad"));
+        vediosModelList.add(new VediosModel(R.drawable.ghungrooooo,"Ghungroo","Arjith Singh,Vish..","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ghungroo%20Song%20%20WAR%20%20Hrithik%20Roshan%20Vaani%20Kapoor%20%20Arijit%20Singh%20Shilpa%20%20Vishal%20%20Shekhar%20Kumaar_v240P.mp4?alt=media&token=c3618cc0-0d8e-4f43-bdb9-e6fcba1b3e5a"));
+        vediosModelList.add(new VediosModel(R.drawable.goabeach,"Goa Beach","Tony Kakkar,Neha k..","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20GOA%20BEACH%20%20Tony%20Kakkar%20%20Neha%20Kakkar%20%20Aditya%20Narayan%20%20Kat%20%20Anshul%20Garg%20%20Latest%20Hindi%20Song%202020_v240P.mp4?alt=media&token=6aff76f0-6abd-4db6-ac6b-c90be5814eb6"));
+        vediosModelList.add(new VediosModel(R.drawable.jannath,"Jannath","Ed Shereen","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
+        vediosModelList.add(new VediosModel(R.drawable.yummy,"Yummy","Justin Beiber","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Beautiful%20People%20feat%20Khalid%20Official%20Video_360p.mp4?alt=media&token=1a24efe0-e586-4a03-a687-befb205f48f6"));
+        vediosModelList.add(new VediosModel(R.drawable.galkarke,"Gal Karke","Asees Kaur","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
+        vediosModelList.add(new VediosModel(R.drawable.jonasbrothers,"Sucker","Jonas Brother","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ghungroo%20Song%20%20WAR%20%20Hrithik%20Roshan%20Vaani%20Kapoor%20%20Arijit%20Singh%20Shilpa%20%20Vishal%20%20Shekhar%20Kumaar_v240P.mp4?alt=media&token=c3618cc0-0d8e-4f43-bdb9-e6fcba1b3e5a"));
+        vediosModelList.add(new VediosModel(R.drawable.lehenga,"Lehenga","Ed Shereen","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Lehanga%20%20Jass%20Manak%20Official%20Video%20Satti%20Dhillon%20%20Latest%20Punjabi%20Songs%20%20GK%20DIGITAL%20%20Geet%20MP3_v240P.mp4?alt=media&token=31a4ed02-edee-4b42-8342-3b871ce4b976"));
+        vediosModelList.add(new VediosModel(R.drawable.kalla,"Kalla Sohna Nai","Neha Kakkar","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Lehanga%20%20Jass%20Manak%20Official%20Video%20Satti%20Dhillon%20%20Latest%20Punjabi%20Songs%20%20GK%20DIGITAL%20%20Geet%20MP3_v240P.mp4?alt=media&token=31a4ed02-edee-4b42-8342-3b871ce4b976"));
 
     }
 

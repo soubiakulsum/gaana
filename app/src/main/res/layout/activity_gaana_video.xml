@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.GaanaVideoActivity">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:id="@+id/GaanaVideoView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@+id/GaanaVideoView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/VideoName"
+        android:paddingStart="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="490dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@+id/GaanaVideoView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/SingerVideoName"
+        android:paddingStart="10dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="italic"
+        android:layout_marginTop="530dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="490dp"
+        android:src="@drawable/like"
+        app:layout_constraintTop_toTopOf="@+id/GaanaVideoView"
+        android:layout_marginEnd="30dp"
+        android:layout_height="40dp"/>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="545dp"
+        android:src="@drawable/whatsapp"
+        app:layout_constraintTop_toTopOf="@+id/GaanaVideoView"
+        android:layout_marginEnd="30dp"
+        android:layout_height="40dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
