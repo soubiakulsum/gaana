@@ -11,26 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
-        <activity android:name=".activities.GaanaVideoActivity"></activity>
-        <activity android:name=".activities.PlayMusicActivity"></activity>
+        <activity android:name=".activities.GetOTP"></activity>
+        <activity android:name=".activities.GaanaVideoActivity" />
+        <activity android:name=".activities.PlayMusicActivity" />
         <activity android:name=".activities.DummyActivity" />
-        <activity android:name=".activities.MyHotShots"></activity>
-        <activity android:name=".activities.HotshotsActivity"></activity>
-        <activity android:name=".activities.SearchSongActivity"></activity>
-        <activity android:name=".activities.EnterNumber"></activity>
+        <activity android:name=".activities.MyHotShots" />
+        <activity android:name=".activities.HotshotsActivity" />
+        <activity android:name=".activities.SearchSongActivity" />
+        <activity android:name=".activities.EnterNumber" />
         <activity android:name=".activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-<!--        <activity android:name=".activities.PlayMusicActivity" />-->
-<!--        <activity android:name=".activities.DummyActivity" />-->
-<!--        <activity android:name=".activities.MyHotShots" />-->
-<!--        <activity android:name=".activities.ContinueWithPhoneNumber" />-->
-<!--        <activity android:name=".activities.HotshotsActivity" />-->
-<!--        <activity android:name=".activities.SearchSongActivity" />-->
+        </activity> <!-- <activity android:name=".activities.PlayMusicActivity" /> -->
+        <!-- <activity android:name=".activities.DummyActivity" /> -->
+        <!-- <activity android:name=".activities.MyHotShots" /> -->
+        <!-- <activity android:name=".activities.ContinueWithPhoneNumber" /> -->
+        <!-- <activity android:name=".activities.HotshotsActivity" /> -->
+        <!-- <activity android:name=".activities.SearchSongActivity" /> -->
         <activity android:name=".activities.SettingsActivity" />
 
         <service
@@ -40,35 +40,20 @@
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- </activity> -->
-
-            android:exported="true" />
-        <!--        <activity android:name=".activities.MainActivity">-->
-        <!--            <intent-filter>-->
-        <!--                <action android:name="android.intent.action.MAIN" />-->
-        <!--        </activity>-->
-
-        <activity android:name=".activities.ContinueWithPhoneNumber" />
-
-
-            android:exported="true" /> <!-- <activity android:name=".activities.MainActivity"> -->
+        <!-- <activity android:name=".activities.MainActivity"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- </activity> -->
-
+        <activity android:name=".activities.ContinueWithPhoneNumber" /> <!-- <activity android:name=".activities.MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- </activity> -->
         <service
             android:name=".services.Empty"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activities.MainActivity"></activity>
-
-<!--        <activity android:name=".activities.MainActivity">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>
