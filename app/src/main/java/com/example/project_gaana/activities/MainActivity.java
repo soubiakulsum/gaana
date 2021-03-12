@@ -1,5 +1,6 @@
 package com.example.project_gaana.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -8,24 +9,24 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.project_gaana.DataModel.TrendingEnglishSongModel;
-import com.example.project_gaana.OnItemClicked;
 import com.example.project_gaana.R;
 import com.example.project_gaana.adapter.HomeAdapter;
+import com.example.project_gaana.fragments.BuzzExtended;
 import com.example.project_gaana.fragments.BuzzFragment;
-import com.example.project_gaana.fragments.BuzzzFragment;
+import com.example.project_gaana.fragments.FragmentListener;
 import com.example.project_gaana.fragments.MusicFragment;
 import com.example.project_gaana.fragments.PodcastFragment;
-import com.example.project_gaana.model.PopularEnglishModel;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity{
+
+
+public class MainActivity extends AppCompatActivity implements FragmentListener {
+
 
     private ViewPager Pager;
     private TabLayout HomeTabLayout;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
     private ImageView Mnavi4;
     private ImageView Mnavi2;
     private ImageView Mnavi1;
+    private ImageButton btnSearch;
 
     private FragmentManager fragmentManager;
 
@@ -63,7 +65,14 @@ public class MainActivity extends AppCompatActivity{
         Mnavi4 = findViewById(R.id.navi4);
         Mnavi2 = findViewById(R.id.navi2);
         Mnavi1 = findViewById(R.id.navi1);
-
+        btnSearch = findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SearchSongActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         fragmentManager = getSupportFragmentManager();
@@ -71,7 +80,7 @@ public class MainActivity extends AppCompatActivity{
         Mnavi1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),MainActivity.class);
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -125,6 +134,18 @@ public class MainActivity extends AppCompatActivity{
         fragmentTransaction.replace(R.id.fcContainer, buzzFragment, "Fragme").commit();
     }
 
+    @Override
+    public void launchBuzzExtendedFragment(Bundle bundle) {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        BuzzExtended buzzExtended = new BuzzExtended();
+        buzzExtended.setArguments(bundle);
+        fragmentTransaction.replace(R.id.fcContainer, buzzExtended, "buzzExtended").
+                addToBackStack("buzzz").commit();
 
+
+
+
+
+  
 
 }

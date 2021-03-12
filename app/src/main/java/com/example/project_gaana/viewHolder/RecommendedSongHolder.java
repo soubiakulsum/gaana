@@ -3,11 +3,13 @@ package com.example.project_gaana.viewHolder;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_gaana.DataModel.RecommendedModel;
@@ -25,7 +27,7 @@ public class RecommendedSongHolder extends RecyclerView.ViewHolder {
 
     TextView tvRecommendedSongName;
 
-    RelativeLayout cvRecommendedPlayMusics;
+    ConstraintLayout cvRecommendedPlayMusics;
 
     private MediaPlayer mPlayer;
 
@@ -33,7 +35,7 @@ public class RecommendedSongHolder extends RecyclerView.ViewHolder {
 
     ItemClickListeners itemClickListeners;
 
-    GifImageView givPause;
+    ImageButton givPause;
 
 
 

@@ -1,86 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="top"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:orientation="vertical">
 
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="120dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardSearchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="12dp">
 
-       <ImageView
-           android:id="@+id/trackImage"
-           android:layout_width="150dp"
-           android:layout_height="wrap_content"
-           android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/trackImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop" />
 
-       <TextView
-           android:id="@+id/title"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="48dp"
-           android:layout_marginStart="170dp"
-           android:padding="5dp"
-           android:textSize="10sp" />
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_playbutton" />
 
-       <TextView
-           android:id="@+id/id"
-           android:layout_width="match_parent"
-           android:layout_marginTop="85dp"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="170dp"
-           android:padding="5dp"
-           android:textSize="10sp" />
+    </androidx.cardview.widget.CardView>
 
-       <ImageView
-           android:id="@+id/btnPlay"
-           android:layout_width="50dp"
-           android:layout_height="30dp"
-           android:src="@drawable/play"
-           android:layout_marginTop="5dp"
-           android:layout_marginStart="250dp"
-           android:layout_marginEnd="10dp"
-           android:textAllCaps="false"
-           android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/CardSearchResult" />
 
-
-       <ImageView
-           android:id="@+id/btnPause"
-           android:layout_width="50dp"
-           android:layout_height="40dp"
-           android:src="@drawable/pause"
-           android:visibility="gone"
-           android:layout_marginTop="5dp"
-           android:layout_marginStart="250dp"
-           android:layout_marginEnd="10dp"
-           android:textAllCaps="false"
-           />
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/CardSearchResult" />
 
 
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/play"
+        android:visibility="gone" />
 
 
+</RelativeLayout>
 
 
+    <!--   <RelativeLayout-->
+    <!--       android:layout_width="match_parent"-->
+    <!--       android:layout_height="120dp">-->
+
+    <!--       <ImageView-->
+    <!--           android:id="@+id/trackImage"-->
+    <!--           android:layout_width="150dp"-->
+    <!--           android:layout_height="wrap_content"-->
+    <!--           android:scaleType="centerCrop" />-->
+
+    <!--       <TextView-->
+    <!--           android:id="@+id/title"-->
+    <!--           android:layout_width="match_parent"-->
+    <!--           android:layout_height="wrap_content"-->
+    <!--           android:layout_marginTop="48dp"-->
+    <!--           android:layout_marginStart="170dp"-->
+    <!--           android:padding="5dp"-->
+    <!--           android:textSize="10sp" />-->
+
+    <!--       <TextView-->
+    <!--           android:id="@+id/id"-->
+    <!--           android:layout_width="match_parent"-->
+    <!--           android:layout_marginTop="85dp"-->
+    <!--           android:layout_height="wrap_content"-->
+    <!--           android:layout_marginStart="170dp"-->
+    <!--           android:padding="5dp"-->
+    <!--           android:textSize="10sp" />-->
+
+    <!--       <ImageView-->
+    <!--           android:id="@+id/btnPlay"-->
+    <!--           android:layout_width="50dp"-->
+    <!--           android:layout_height="30dp"-->
+    <!--           android:src="@drawable/play"-->
+    <!--           android:layout_marginTop="5dp"-->
+    <!--           android:layout_marginStart="250dp"-->
+    <!--           android:layout_marginEnd="10dp"-->
+    <!--           android:textAllCaps="false"-->
+    <!--           android:textColor="@color/white" />-->
 
 
-   </RelativeLayout>
+    <!--       <ImageView-->
+    <!--           android:id="@+id/btnPause"-->
+    <!--           android:layout_width="50dp"-->
+    <!--           android:layout_height="40dp"-->
+    <!--           android:src="@drawable/pause"-->
+    <!--           android:visibility="gone"-->
+    <!--           android:layout_marginTop="5dp"-->
+    <!--           android:layout_marginStart="250dp"-->
+    <!--           android:layout_marginEnd="10dp"-->
+    <!--           android:textAllCaps="false"-->
+    <!--           />-->
+    <!--       -->
+    <!--   </RelativeLayout>-->
 
-                <Button
-                    android:id="@+id/btnDelete"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="10dp"
-                    android:textSize="15sp"
-                    android:visibility="gone"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@color/design_default_color_error"
-                    android:text="Remove"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
+<!--                    <Button-->
+<!--                        android:id="@+id/btnDelete"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:textSize="15sp"-->
+<!--                     -->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@color/design_default_color_error"-->
+<!--                        android:text="Remove"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:textColor="@color/white" />-->
 
 
-
-</androidx.cardview.widget.CardView>

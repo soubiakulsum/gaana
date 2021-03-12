@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BuzzExtended">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" />
+        <!--        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:id="@+id/buzzVideoView"-->
+        <!--            app:videoId="XOzCP0wbluc"-->
+        <!--            app:autoPlay="true"-->
+        <!--            app:showFullScreenButton="true"-->
+        <!--            android:layout_height="400dp"/>-->
+        <VideoView
+            android:id="@+id/buzzVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <LinearLayout
+            android:id="@+id/buzzlikeshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buzzVideoView"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvbuzzlike1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@drawable/ic_baseline_thumb_up_24"
+                android:drawablePadding="5dp" />
+
+            <TextView
+                android:id="@+id/buzzShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@drawable/ic_whatsapp"
+                android:drawablePadding="10dp"
+                android:text="Share" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvtwodaysago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buzzlikeshare"
+            android:layout_marginStart="15dp"
+            android:drawablePadding="5dp"
+            android:text="2 days ago "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvbuzzarticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans"
+            android:layout_below="@id/tvtwodaysago"
+            android:layout_margin="5dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="15dp"
+            android:text="Jasmin walia Bhasin , Aly Goni to feature in musi cvideo"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
