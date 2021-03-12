@@ -10,4 +10,6 @@ public interface ApiService {
     @GET("/search")
     Call<Responses> getUser(@Query("term") String str);
 
+
+    //this is api services
 }
