@@ -71,7 +71,7 @@ public class PlayMusicActivity extends AppCompatActivity {
         btnPlayMusic = findViewById(R.id.btn_playmusic);
         btnPauseMusic = findViewById(R.id.btn_pausemusic);
         tvSingerName = findViewById(R.id.SingerName);
-
+//
 
         ivGetImage.setImageResource(getIntent().getIntExtra("image", 0));
 
