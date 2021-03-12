@@ -16,6 +16,20 @@
         </activity>
         <activity android:name=".activities.DummyActivity"/>
         <activity android:name=".activities.MyHotShots"></activity>
+        <activity android:name=".activities.HotshotsActivity">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+
+        </activity>
+
+        <activity android:name=".activities.SearchSongActivity">
+        </activity>
+        <activity android:name=".activities.MyHotShots" />
         <activity android:name=".activities.SettingsActivity" />
 
 
@@ -37,11 +51,11 @@
             android:exported="true" />
 
         <activity android:name=".activities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
+
+
         </activity>
     </application>
 
