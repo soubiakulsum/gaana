@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.PlayMusicActivity">
+
 <!--    <ImageView-->
 <!--        android:id="@+id/GetSongImage"-->
 <!--        android:layout_width="match_parent"-->
@@ -99,3 +100,4 @@
             />
     </RelativeLayout>
 </RelativeLayout>
+

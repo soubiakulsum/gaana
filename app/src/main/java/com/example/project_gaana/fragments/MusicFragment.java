@@ -1,22 +1,22 @@
 package com.example.project_gaana.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.project_gaana.R;
+import com.example.project_gaana.activities.ContinueWithPhoneNumber;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MusicFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MusicFragment extends Fragment {
-
+private Button mBtnbtnLOgin;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,15 +30,6 @@ public class MusicFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MusicFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static MusicFragment newInstance(String param1, String param2) {
         MusicFragment fragment = new MusicFragment();
         Bundle args = new Bundle();
@@ -62,5 +53,14 @@ public class MusicFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_music, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mBtnbtnLOgin=view.findViewById(R.id.btnLOgin);
+        Intent intent = new Intent(getActivity(), ContinueWithPhoneNumber.class);
+        startActivity(intent);
+
     }
 }

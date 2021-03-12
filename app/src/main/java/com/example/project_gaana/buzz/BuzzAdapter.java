@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_gaana.R;
+import com.example.project_gaana.fragments.RecyclerViewItemCickListener;
 
 import java.util.List;
 
@@ -15,9 +16,11 @@ public class BuzzAdapter extends RecyclerView.Adapter<BuzzViewHolder>{
 
 
     private List<Buzz> buzzList;
+    RecyclerViewItemCickListener recyclerViewItemCickListener;
 
-    public BuzzAdapter(List<Buzz> buzzList) {
+    public BuzzAdapter(List<Buzz> buzzList, RecyclerViewItemCickListener recyclerViewItemCickListener) {
         this.buzzList = buzzList;
+        this.recyclerViewItemCickListener = recyclerViewItemCickListener;
     }
 
     @NonNull
@@ -25,7 +28,7 @@ public class BuzzAdapter extends RecyclerView.Adapter<BuzzViewHolder>{
     public BuzzViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.buzz_item_layout, parent, false);
 
-        return new BuzzViewHolder(view);
+        return new BuzzViewHolder(view,recyclerViewItemCickListener);
     }
 
     @Override

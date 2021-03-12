@@ -1,17 +1,22 @@
 package com.example.project_gaana.buzz;
 
 public class Buzz {
-
-    private String like ;
+    private String mediaurl;
+    private String like;
     private String daysAgo;
     private String article;
     private String expandArtile;
 
-    public Buzz(String like, String daysAgo, String article, String expandArtile) {
+    public Buzz(String mediaurl, String like, String daysAgo, String article, String expandArtile) {
+        this.mediaurl = mediaurl;
         this.like = like;
         this.daysAgo = daysAgo;
         this.article = article;
         this.expandArtile = expandArtile;
+    }
+
+    public String getMediaurl() {
+        return mediaurl;
     }
 
     public String getLike() {
@@ -29,5 +34,4 @@ public class Buzz {
     public String getExpandArtile() {
         return expandArtile;
     }
-
 }
