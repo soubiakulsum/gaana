@@ -47,6 +47,8 @@
         <EditText
             android:layout_width="match_parent"
             android:drawablePadding="5dp"
+            android:id="@+id/phoneNumber"
+            android:inputType="number"
             android:drawableEnd="@drawable/ic__01_close"
             android:layout_height="wrap_content" />
     </LinearLayout>
