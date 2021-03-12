@@ -6,13 +6,19 @@ public class Buzz {
     private String daysAgo;
     private String article;
     private String expandArtile;
+    private String videoUrl;
 
-    public Buzz(String mediaurl, String like, String daysAgo, String article, String expandArtile) {
-        this.mediaurl = mediaurl;
+
+    public Buzz(String like, String daysAgo, String article, String expandArtile,String videoUrl) {
         this.like = like;
         this.daysAgo = daysAgo;
         this.article = article;
         this.expandArtile = expandArtile;
+        this.videoUrl=videoUrl;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
     public String getMediaurl() {

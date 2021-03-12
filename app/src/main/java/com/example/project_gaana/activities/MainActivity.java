@@ -143,9 +143,6 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
                 addToBackStack("buzzz").commit();
 
 
-
-
-
-  
+    }
 
 }
