@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_green"
+    android:background="@drawable/whitegreen"
     tools:context=".fragments.MusicFragment">
 
 <!--    <androidx.viewpager.widget.ViewPager-->

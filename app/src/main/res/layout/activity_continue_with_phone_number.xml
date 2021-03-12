@@ -67,7 +67,7 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/btnHome"
+        android:id="@+id/btnHome45"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_below="@id/number"
@@ -86,7 +86,7 @@
         android:id="@+id/Continue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnHome"
+        android:layout_below="@id/btnHome45"
         android:layout_margin="40dp"
         android:layout_marginTop="100dp"
         android:text="Or continue with Phone Number"
