@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.ContinueWithPhoneNumber">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+
+        android:text="SKIP"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/gaana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/skip"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="20dp"
+        android:text="gaana"
+        android:textAlignment="center"
+        android:fontFamily="@font/bolditalic"
+        android:textColor="#E80A0A"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gaana"
+        android:layout_margin="10dp"
+        android:layout_marginTop="100dp"
+        android:text="Hello World"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/prevoiuly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hello"
+        android:layout_margin="5dp"
+        android:text="You Previously logged into Gaana with "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prevoiuly"
+        android:text="+9089809808 "
+
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/number"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/red_button"
+        android:paddingHorizontal="25dp"
+        android:text="Continue With Phone Number"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/Continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnHome"
+        android:layout_margin="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Or continue with Phone Number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Continue"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:src="@drawable/fb"
+            android:layout_height="45dp"
+            android:layout_weight="1" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:src="@drawable/google"
+            android:layout_height="45dp"
+            android:layout_weight="1" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:src="@drawable/gmail"
+            android:layout_height="45dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

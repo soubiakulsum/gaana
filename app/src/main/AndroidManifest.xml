@@ -15,6 +15,7 @@
         <activity android:name=".activities.DummyActivity"/>
         <activity android:name=".activities.MyHotShots">
         </activity>
+        <activity android:name=".activities.ContinueWithPhoneNumber"/>
         <activity android:name=".activities.HotshotsActivity">
         </activity>
         <activity android:name=".activities.SearchSongActivity">
