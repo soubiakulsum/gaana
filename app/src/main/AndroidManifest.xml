@@ -2,12 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_gaana">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <uses-feature android:name="android.hardware.type.watch" />
-
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,74 +10,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
-
         <activity android:name=".activities.PlayMusicActivity">
-
         </activity>
         <activity android:name=".activities.DummyActivity"/>
         <activity android:name=".activities.MyHotShots">
-
         </activity>
         <activity android:name=".activities.HotshotsActivity">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-
-
-        <activity
-            android:name=".activities.ContinueWithPhoneNumber"
-            android:label="@string/title_activity_continue_with_phone_number">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
-
         <activity android:name=".activities.SearchSongActivity">
         </activity>
-
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
-
-        <activity android:name=".activities.HotshotsActivity" />
-        <activity android:name=".activities.SearchSongActivity" />
-        <activity android:name=".activities.MyHotShots" />
-
         <activity android:name=".activities.SettingsActivity" />
-        <activity android:name=".activities.PlayMusicActivity" />
-        <activity android:name=".activities.DummyActivity" />
-
         <service
             android:name=".services.Empty"
             android:enabled="true"
             android:exported="true" />
-
+        <!--        <activity android:name=".activities.MainActivity">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--        </activity>-->
+        <service
+            android:name=".services.Empty"
+            android:enabled="true"
+            android:exported="true" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
-
         </activity>
     </application>
-
 </manifest>

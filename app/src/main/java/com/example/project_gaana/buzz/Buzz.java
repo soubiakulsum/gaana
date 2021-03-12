@@ -8,8 +8,7 @@ public class Buzz {
     private String expandArtile;
     private String videoUrl;
 
-    public Buzz(String mediaurl, String like, String daysAgo, String article, String expandArtile) {
-        this.mediaurl = mediaurl;
+
     public Buzz(String like, String daysAgo, String article, String expandArtile,String videoUrl) {
         this.like = like;
         this.daysAgo = daysAgo;

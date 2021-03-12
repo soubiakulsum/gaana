@@ -10,7 +10,9 @@ import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project_gaana.ItemClickListeners;
 import com.example.project_gaana.R;
+import com.example.project_gaana.fragments.RecyclerViewItemCickListener;
 
 public class BuzzViewHolder extends RecyclerView.ViewHolder {
 
@@ -23,10 +25,14 @@ public class BuzzViewHolder extends RecyclerView.ViewHolder {
 
     private ProgressBar progressBar;
 
+    RecyclerViewItemCickListener recyclerViewItemCickListener;
 
-    public BuzzViewHolder(@NonNull View itemView) {
+
+    public BuzzViewHolder(@NonNull View itemView,RecyclerViewItemCickListener recyclerViewItemCickListener) {
         super(itemView);
         initViews(itemView);
+
+        this.recyclerViewItemCickListener=recyclerViewItemCickListener;
     }
 
     private void initViews(View itemView) {

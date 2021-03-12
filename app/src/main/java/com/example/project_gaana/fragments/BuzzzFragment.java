@@ -20,7 +20,7 @@ import com.example.project_gaana.buzz.BuzzAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuzzzFragment extends Fragment {
+public class BuzzzFragment extends Fragment implements RecyclerViewItemCickListener {
 
 
     private List<Buzz> buzzList = new ArrayList<>();
@@ -52,8 +52,13 @@ public class BuzzzFragment extends Fragment {
     private void BuildRecyclerData() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(linearLayoutManager);
-        BuzzAdapter buzzAdapter = new BuzzAdapter(buzzList);
+        BuzzAdapter buzzAdapter = new BuzzAdapter(buzzList,this);
         mRecyclerView.setAdapter(buzzAdapter);
+    }
+
+    @Override
+    public void OnItemClicked(Buzz buzz, int position) {
+
     }
 
 //    private void setRecyclerAdapter() {
