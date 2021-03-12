@@ -47,6 +47,8 @@ public class GaanaVideoActivity extends AppCompatActivity {
 
        VvGaanaVideo.setVideoPath(url);
 
+       //xyz
+
 
 
 
