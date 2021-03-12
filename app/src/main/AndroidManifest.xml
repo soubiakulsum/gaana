@@ -30,10 +30,21 @@
         <service
             android:name=".services.Empty"
             android:enabled="true"
+
+            android:exported="true" />
+        <!--        <activity android:name=".activities.MainActivity">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--        </activity>-->
+
+        <activity android:name=".activities.ContinueWithPhoneNumber" />
+
+
             android:exported="true" /> <!-- <activity android:name=".activities.MainActivity"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- </activity> -->
+
         <service
             android:name=".services.Empty"
             android:enabled="true"

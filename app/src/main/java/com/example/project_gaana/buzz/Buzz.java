@@ -1,7 +1,6 @@
 package com.example.project_gaana.buzz;
 
 public class Buzz {
-    private String mediaurl;
     private String like;
     private String daysAgo;
     private String article;
@@ -21,9 +20,6 @@ public class Buzz {
         return videoUrl;
     }
 
-    public String getMediaurl() {
-        return mediaurl;
-    }
 
     public String getLike() {
         return like;

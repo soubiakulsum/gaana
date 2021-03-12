@@ -10,8 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.project_gaana.R;
 
+import java.util.List;
+
 
 public class NewSongsFragment extends Fragment {
+
 
 
     public NewSongsFragment() {
