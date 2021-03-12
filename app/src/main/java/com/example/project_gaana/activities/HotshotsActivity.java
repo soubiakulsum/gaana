@@ -53,16 +53,16 @@ public class HotshotsActivity extends AppCompatActivity {
         videos.add(ob4);
 
 
-        videoModel ob8 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Beautiful%20english%20whats%20app%20status%20forever%20%20English%20song%20status_360p.mp4?alt=media&token=cda88f1b-9148-4f11-8c41-5321f4c08bc7","Love Me Like You do","1.9M Views");
+        videoModel ob8 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Beautiful%20english%20whats%20app%20status%20forever%20%20English%20song%20status_360p.mp4?alt=media&token=cda88f1b-9148-4f11-8c41-5321f4c08bc7","Love Me Like You do","11.3M Views");
         videos.add(ob8);
 
-        videoModel ob5 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Marshmallow%20alone%20dance%20status%20forever%20%20English%20song%20status_360p.mp4?alt=media&token=fc9f912e-ddf9-4eaa-b046-fc65fefb7307","Marshmallow alone dance","1.9M Views");
+        videoModel ob5 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Marshmallow%20alone%20dance%20status%20forever%20%20English%20song%20status_360p.mp4?alt=media&token=fc9f912e-ddf9-4eaa-b046-fc65fefb7307","Marshmallow alone dance","17.69M Views");
         videos.add(ob5);
 
-        videoModel ob6 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Alan%20Walker%20%20The%20spectre%20music%20status%20%20English%20song%20status_360p.mp4?alt=media&token=84bde0a0-3bd2-45e8-84ec-d2be1b4da330","Alan Walker The spectre music","1.9M Views");
+        videoModel ob6 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Alan%20Walker%20%20The%20spectre%20music%20status%20%20English%20song%20status_360p.mp4?alt=media&token=84bde0a0-3bd2-45e8-84ec-d2be1b4da330","Alan Walker The spectre music","1.93M Views");
         videos.add(ob6);
 
-        videoModel ob9 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Khesari%20lal%20Yadav%20new%20bhojpuri%20song%20whatsapp%20status%20video%202020%20%20bhojpuri%20hit%20song%20bhojpuri%20status_480p.mp4?alt=media&token=a7e29778-4557-4365-a276-7fff48827069","Kesari Lal Bhojpuri","1.9M Views");
+        videoModel ob9 = new videoModel("https://firebasestorage.googleapis.com/v0/b/nykaa-a5468.appspot.com/o/yt1s.com%20-%20Khesari%20lal%20Yadav%20new%20bhojpuri%20song%20whatsapp%20status%20video%202020%20%20bhojpuri%20hit%20song%20bhojpuri%20status_480p.mp4?alt=media&token=a7e29778-4557-4365-a276-7fff48827069","Kesari Lal Bhojpuri","1.92M Views");
         videos.add(ob9);
 
 
