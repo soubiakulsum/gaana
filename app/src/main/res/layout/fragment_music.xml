@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_green"
+    android:background="@drawable/whitegreen"
     tools:context=".fragments.MusicFragment">
 
 <!--    <androidx.viewpager.widget.ViewPager-->
@@ -49,8 +49,18 @@
         android:layout_height="358dp"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/green"
-        />
+        android:background="@drawable/green"/>
+<!--        />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_below="@id/textView"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
 
     <TextView
         android:id="@+id/orignals"
@@ -79,12 +89,11 @@
         android:id="@+id/btnLOgin"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-
         android:layout_below="@id/podcarst"
         android:layout_marginTop="15dp"
         android:background="@drawable/red_button"
         android:text="Login or Sign Up Now"
-        android:layout_marginHorizontal="30dp"
+        android:layout_marginHorizontal="60dp"
         android:paddingHorizontal="30dp"
         android:textAllCaps="false"
         android:textColor="@color/white"

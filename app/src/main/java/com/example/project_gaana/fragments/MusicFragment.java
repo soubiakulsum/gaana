@@ -2,23 +2,25 @@ package com.example.project_gaana.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.example.project_gaana.R;
 import com.example.project_gaana.activities.ContinueWithPhoneNumber;
 
 public class MusicFragment extends Fragment {
 
+    private Button mBtnbtnLOgin;
 
-private Button mBtnbtnLOgin;
+
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,7 +62,9 @@ private Button mBtnbtnLOgin;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mBtnbtnLOgin=view.findViewById(R.id.btnLOgin);
+        mBtnbtnLOgin = view.findViewById(R.id.btnLOgin);
+
+
         Intent intent = new Intent(getActivity(), ContinueWithPhoneNumber.class);
         startActivity(intent);
 

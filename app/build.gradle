@@ -57,6 +57,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compile 'com.ryan.rv_gallery:rv-gallery:1.1.2'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
+    implementation 'com.airbnb.android:lottie:3.4.1'
 
 
 }
