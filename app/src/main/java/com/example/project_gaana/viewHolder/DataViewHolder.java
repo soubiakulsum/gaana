@@ -2,6 +2,7 @@ package com.example.project_gaana.viewHolder;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,9 +20,9 @@ public class DataViewHolder extends RecyclerView.ViewHolder {
 
     private TextView title, id;
    private ImageView Image;
-   private ImageView btnPlay;
-   private ImageView btnPause;
-   private Button btnDelete;
+   private ImageButton btnPlay;
+   private ImageButton btnPause;
+//   private Button btnDelete;
     private OnClickListener onClickListener;
     int playing;
 
@@ -34,7 +35,7 @@ public class DataViewHolder extends RecyclerView.ViewHolder {
         Image = itemView.findViewById(R.id.trackImage);
         btnPlay = itemView.findViewById(R.id.btnPlay);
         btnPause = itemView.findViewById(R.id.btnPause);
-        btnDelete = itemView.findViewById(R.id.btnDelete);
+//        btnDelete = itemView.findViewById(R.id.btnDelete);
     }
 
     public void setData(int pos, ResultsItem response) {
@@ -64,25 +65,25 @@ public class DataViewHolder extends RecyclerView.ViewHolder {
                 playing=-1;
             }
         });
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(playing==-1){
-                    onClickListener.delete(pos);
-                }
-                else if(playing==pos){
-                    playing=-1;
-                    onClickListener.pauseMusic();
-                    onClickListener.delete(pos);
-                }
-                else
-                {
-                    onClickListener.delete(pos);
-                }
-                Toast.makeText(v.getContext(), response.getTrackName()+" is deleted",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+//        btnDelete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(playing==-1){
+//                    onClickListener.delete(pos);
+//                }
+//                else if(playing==pos){
+//                    playing=-1;
+//                    onClickListener.pauseMusic();
+//                    onClickListener.delete(pos);
+//                }
+//                else
+//                {
+//                    onClickListener.delete(pos);
+//                }
+//                Toast.makeText(v.getContext(), response.getTrackName()+" is deleted",
+//                        Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
     }
 }

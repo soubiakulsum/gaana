@@ -23,7 +23,10 @@ import com.example.project_gaana.fragments.MusicFragment;
 import com.example.project_gaana.fragments.PodcastFragment;
 import com.google.android.material.tabs.TabLayout;
 
+
+
 public class MainActivity extends AppCompatActivity implements FragmentListener {
+
 
     private ViewPager Pager;
     private TabLayout HomeTabLayout;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
     private ImageView Mnavi4;
     private ImageView Mnavi2;
     private ImageView Mnavi1;
+    private ImageButton btnSearch;
 
     private FragmentManager fragmentManager;
 
@@ -61,7 +65,14 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
         Mnavi4 = findViewById(R.id.navi4);
         Mnavi2 = findViewById(R.id.navi2);
         Mnavi1 = findViewById(R.id.navi1);
-
+        btnSearch = findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SearchSongActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         fragmentManager = getSupportFragmentManager();
@@ -69,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
         Mnavi1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),MainActivity.class);
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -133,27 +144,8 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
 
 
 
-    }
 
-    public class WrapContentHeightViewPager extends ViewPager {
 
-        public WrapContentHeightViewPager(@NonNull Context context) {
-            super(context);
-        }
+  
 
-        @Override
-        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-            int height = 0;
-            for (int i = 0; i < getChildCount(); i++) {
-                View child = getChildAt(i);
-                child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
-                int h = child.getMeasuredHeight();
-                if (h > height) height = h;
-            }
-            heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
-            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        }
-    }
 }
