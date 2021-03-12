@@ -15,7 +15,9 @@
 
         </activity>
         <activity android:name=".activities.DummyActivity"/>
-        <activity android:name=".activities.MyHotShots"></activity>
+        <activity android:name=".activities.MyHotShots">
+
+        </activity>
         <activity android:name=".activities.HotshotsActivity">
 
 
@@ -23,8 +25,8 @@
 
         </activity>
 
-<!--        <activity android:name=".activities.SearchSongActivity">-->
-<!--        </activity>-->
+        <activity android:name=".activities.SearchSongActivity">
+        </activity>
         <activity android:name=".activities.SettingsActivity" />
 
 
@@ -52,8 +54,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
 
         </activity>
     </application>

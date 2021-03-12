@@ -28,12 +28,12 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="24dp"
+                        android:layout_width="19dp"
+                        android:layout_height="13dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_calendar_1__1_"
                         android:background="@drawable/circle_bg"
-                        android:layout_height="24dp"/>
+                        android:src="@drawable/ic_calendar_1__1_" />
 
                     <TextView
                         android:layout_width="wrap_content"
