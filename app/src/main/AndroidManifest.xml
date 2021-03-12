@@ -28,6 +28,9 @@
         <!--            <intent-filter>-->
         <!--                <action android:name="android.intent.action.MAIN" />-->
         <!--        </activity>-->
+
+        <activity android:name=".activities.ContinueWithPhoneNumber" />
+
         <service
             android:name=".services.Empty"
             android:enabled="true"
