@@ -33,8 +33,18 @@ public class DummyActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.flContainer, topPicksFragment, "Top").commit();
 
         getDataFromIntent();
+//        getHindiSongsData();
 
     }
+
+//    private void getHindiSongsData() {
+//        if (getIntent() != null && getIntent().getExtras() != null) {
+//            String hindidata = getIntent().getStringExtra("hindialbum");
+//            int hindiimage = getIntent().getIntExtra("hindiname", 0);
+//            ivPlaySong.setImageResource(hindiimage);
+//            tvAlbumName.setText(hindidata);
+//        }
+//    }
 
     private void initViews() {
         ivPlaySong = findViewById(R.id.ivPlaySong);

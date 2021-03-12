@@ -291,7 +291,7 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
     private void setData() {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        HindiSongsAdapter hindiSongsAdapter = new HindiSongsAdapter(hindiModelList);
+        HindiSongsAdapter hindiSongsAdapter = new HindiSongsAdapter(hindiModelList,this);
         HindiRecycler.setLayoutManager(linearLayoutManager);
         HindiRecycler.setAdapter(hindiSongsAdapter);
 
@@ -356,4 +356,12 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
         intent.putExtra("name",englishModel.getTvEnglishSongName());
         startActivity(intent);
     }
+
+//    @Override
+//    public void OnHindiSongClicked(HindiModel hindiModel) {
+//        Intent intent = new Intent(getContext(), DummyActivity.class);
+//        intent.putExtra("hindialbum",hindiModel.getIvHindiSong());
+//        intent.putExtra("hindiname",hindiModel.getTvHindiSongName());
+//        startActivity(intent);
+//    }
 }

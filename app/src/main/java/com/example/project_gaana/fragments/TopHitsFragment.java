@@ -279,7 +279,7 @@ public class TopHitsFragment extends Fragment implements OnItemClicked {
     private void setData() {
 
         GridLayoutManager linearLayoutManager = new GridLayoutManager(getContext(),2,RecyclerView.HORIZONTAL,false);
-        HindiSongsAdapter hindiSongsAdapter = new HindiSongsAdapter(hindiModelList);
+        HindiSongsAdapter hindiSongsAdapter = new HindiSongsAdapter(hindiModelList,this);
         HindiRecycler.setLayoutManager(linearLayoutManager);
         HindiRecycler.setAdapter(hindiSongsAdapter);
 
@@ -323,4 +323,9 @@ public class TopHitsFragment extends Fragment implements OnItemClicked {
     public void OnItemClicked(PopularEnglishModel englishModel) {
 
     }
+
+//    @Override
+//    public void OnHindiSongClicked(HindiModel hindiModel) {
+//
+//    }
 }
