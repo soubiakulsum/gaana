@@ -11,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
+        <activity android:name=".activities.GaanaVideoActivity"></activity>
+        <activity android:name=".activities.PlayMusicActivity"></activity>
+        <activity android:name=".activities.DummyActivity" />
+        <activity android:name=".activities.MyHotShots"></activity>
+        <activity android:name=".activities.HotshotsActivity"></activity>
+        <activity android:name=".activities.SearchSongActivity"></activity>
         <activity android:name=".activities.EnterNumber"></activity>
         <activity android:name=".activities.SplashScreen">
             <intent-filter>
@@ -30,6 +36,10 @@
         <service
             android:name=".services.Empty"
             android:enabled="true"
+            android:exported="true" /> <!-- <activity android:name=".activities.MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- </activity> -->
 
             android:exported="true" />
         <!--        <activity android:name=".activities.MainActivity">-->
@@ -51,6 +61,14 @@
             android:exported="true" />
 
         <activity android:name=".activities.MainActivity"></activity>
+
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
