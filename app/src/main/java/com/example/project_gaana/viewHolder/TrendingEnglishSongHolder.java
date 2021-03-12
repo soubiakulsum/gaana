@@ -1,25 +1,20 @@
 package com.example.project_gaana.viewHolder;
 
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.SeekBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_gaana.DataModel.TrendingEnglishSongModel;
 import com.example.project_gaana.ItemClickListeners;
 import com.example.project_gaana.R;
 import com.example.project_gaana.activities.PlayMusicActivity;
-
-import java.io.IOException;
 
 public class TrendingEnglishSongHolder extends RecyclerView.ViewHolder {
 
@@ -28,7 +23,7 @@ public class TrendingEnglishSongHolder extends RecyclerView.ViewHolder {
 
     TextView tvSingerName;
 
-    CardView mcvPlayMusic;
+    ConstraintLayout mcvPlayMusic;
 
     ItemClickListeners itemClickListeners;
 
@@ -47,6 +42,7 @@ public class TrendingEnglishSongHolder extends RecyclerView.ViewHolder {
         mcvPlayMusic=itemView.findViewById(R.id.cardPlayMusic);
 
     }
+
 
     public void SetData(TrendingEnglishSongModel trendingEnglishSongModel) {
 

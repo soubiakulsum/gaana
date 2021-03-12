@@ -179,7 +179,7 @@ public class TopPicksFragment extends Fragment implements ItemClickListeners {
 
     private void buildData() {
 
-        trendingEnglishSongModels.add(new TrendingEnglishSongModel(R.drawable.holdon,"Hold On","JustinBiber","https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/70/37/c0/7037c092-4953-45fb-0cd9-9e7230227e4d/mzaf_7998885633374904451.plus.aac.p.m4a"));
+        trendingEnglishSongModels.add(new TrendingEnglishSongModel(R.drawable.holdonnn,"Hold On","JustinBiber","https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/70/37/c0/7037c092-4953-45fb-0cd9-9e7230227e4d/mzaf_7998885633374904451.plus.aac.p.m4a"));
         trendingEnglishSongModels.add(new TrendingEnglishSongModel(R.drawable.fake_a_smile,"Fake_a_Smile","Alan Walker","https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/bd/43/5c/bd435c9a-ce0f-6277-deae-dce5054bde23/mzvf_4195779879473843903.640x354.h264lc.U.p.m4v"));
         trendingEnglishSongModels.add(new TrendingEnglishSongModel(R.drawable.selfish_love,"selfish_love","DJ Snake","\"https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/3b/b9/5f/3bb95f9b-1245-038d-32e1-f73bf1ecdb32/mzvf_3220476304840481121.640x478.h264lc.U.p.m4v"));
         trendingEnglishSongModels.add(new TrendingEnglishSongModel(R.drawable.balia_conmigo,"balia_conmigo","Selena Gomez","https://soundcloud.com/ubeyt-aslan2/aragon-music-ft-arozin-sabyh-daria-baila-conmigo-remix"));

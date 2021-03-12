@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project_gaana.OnItemClicked;
 import com.example.project_gaana.R;
 import com.example.project_gaana.model.HindiModel;
 
@@ -14,9 +15,11 @@ public class HindiSongsViewHolder extends RecyclerView.ViewHolder {
     private ImageView ivHindiSong;
     private TextView tvHindiSongName;
     private TextView tvHindiDownloads;
+    private OnItemClicked onItemClicked;
 
-    public HindiSongsViewHolder(@NonNull View itemView) {
+    public HindiSongsViewHolder(@NonNull View itemView,OnItemClicked onItemClicked) {
         super(itemView);
+        this.onItemClicked = onItemClicked;
         initViews(itemView);
     }
 
@@ -30,5 +33,11 @@ public class HindiSongsViewHolder extends RecyclerView.ViewHolder {
         ivHindiSong.setImageResource(hindiModel.getIvHindiSong());
         tvHindiSongName.setText(hindiModel.getTvHindiSongName());
         tvHindiDownloads.setText(hindiModel.getTvHindiDownloads());
+        ivHindiSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                onItemClicked.OnHindiSongClicked(hindiModel);
+            }
+        });
     }
 }

@@ -1,4 +1,4 @@
-package com.example.project_gaana;
+package com.example.project_gaana.model;
 
 public class PopularEnglishModel {
     private int ivEnglishSong;

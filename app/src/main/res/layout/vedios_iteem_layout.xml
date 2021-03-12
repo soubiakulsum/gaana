@@ -8,15 +8,15 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:elevation="6dp"
-        android:layout_margin="4dp"
+        android:layout_margin="6dp"
         app:cardCornerRadius="8dp"
         app:cardMaxElevation="12dp"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/ivGaanaVedio"
-            android:layout_width="130dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="230dp"
             android:scaleType="centerCrop" />
 
     </androidx.cardview.widget.CardView>
@@ -33,6 +33,7 @@
     <TextView
         android:id="@+id/tvSingerName"
         android:drawableLeft="@drawable/ic_baseline_videocam_24"
+        android:drawablePadding="4dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
