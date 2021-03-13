@@ -2,6 +2,9 @@ package com.example.project_gaana.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,29 +13,25 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.project_gaana.OnItemClicked;
+import com.example.project_gaana.PlayTheSongActivity;
+import com.example.project_gaana.R;
 import com.example.project_gaana.activities.DummyActivity;
-import com.example.project_gaana.activities.PlayMusicActivity;
-import com.example.project_gaana.adapter.PodcastAdapter;
-import com.example.project_gaana.model.PodcatsModel;
-import com.example.project_gaana.adapter.PopularEnglishAdapter;
-import com.example.project_gaana.model.PopularEnglishModel;
 import com.example.project_gaana.adapter.DiscoverAdapter;
-import com.example.project_gaana.adapter.RadioAdapter;
-import com.example.project_gaana.adapter.VideosAdapter;
-import com.example.project_gaana.model.DiscoverModel;
-import com.example.project_gaana.model.RadioModel;
-import com.example.project_gaana.adapter.TrendingAdapter;
-import com.example.project_gaana.adapter.TopChartAdapter;
-import com.example.project_gaana.model.TopChartsModel;
 import com.example.project_gaana.adapter.HindiSongsAdapter;
 import com.example.project_gaana.adapter.PicksAdapter;
-import com.example.project_gaana.R;
+import com.example.project_gaana.adapter.PodcastAdapter;
+import com.example.project_gaana.adapter.PopularEnglishAdapter;
+import com.example.project_gaana.adapter.RadioAdapter;
+import com.example.project_gaana.adapter.TopChartAdapter;
+import com.example.project_gaana.adapter.TrendingAdapter;
+import com.example.project_gaana.adapter.VideosAdapter;
+import com.example.project_gaana.model.DiscoverModel;
 import com.example.project_gaana.model.HindiModel;
+import com.example.project_gaana.model.PodcatsModel;
+import com.example.project_gaana.model.PopularEnglishModel;
+import com.example.project_gaana.model.RadioModel;
+import com.example.project_gaana.model.TopChartsModel;
 import com.example.project_gaana.model.TopPicksModel;
 import com.example.project_gaana.model.TrendingSongsModel;
 import com.example.project_gaana.model.VediosModel;
@@ -52,7 +51,7 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
     private List<DiscoverModel> discoverModelList = new ArrayList<>();
     private List<PopularEnglishModel> popularEnglishModelList = new ArrayList<>();
     private List<VediosModel> vediosModelList = new ArrayList<>();
-    private List<PodcatsModel>podcatsModelList = new ArrayList<>();
+    private List<PodcatsModel> podcatsModelList = new ArrayList<>();
 
 
     private GalleryRecyclerView TopPicksRecycler;
@@ -117,40 +116,40 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
     }
 
     private void buildPodcastData() {
-        podcatsModelList.add(new PodcatsModel(R.drawable.aliflaila,"Alif Laila"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.ansunaa,"Ansunaa"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.freedom,"Freedom fighte.."));
-        podcatsModelList.add(new PodcatsModel(R.drawable.kahaanibaaz,"Kahaani baaz"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.karthik,"RJ Karthik"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.mdmotivations,"MD Motivations"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.meditate,"Meditate"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.phuware,"Hasi Phuware"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.riya,"riyas Retro"));
-        podcatsModelList.add(new PodcatsModel(R.drawable.vani,"Joke Vani"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.aliflaila, "Alif Laila"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.ansunaa, "Ansunaa"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.freedom, "Freedom fighte.."));
+        podcatsModelList.add(new PodcatsModel(R.drawable.kahaanibaaz, "Kahaani baaz"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.karthik, "RJ Karthik"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.mdmotivations, "MD Motivations"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.meditate, "Meditate"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.phuware, "Hasi Phuware"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.riya, "riyas Retro"));
+        podcatsModelList.add(new PodcatsModel(R.drawable.vani, "Joke Vani"));
 
     }
 
     private void setVideoData() {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        VideosAdapter videosAdapter = new VideosAdapter(vediosModelList,getContext());
+        VideosAdapter videosAdapter = new VideosAdapter(vediosModelList, getContext());
         VideoRecycler.setLayoutManager(linearLayoutManager);
         VideoRecycler.setAdapter(videosAdapter);
     }
 
     private void buildVideoData() {
-        vediosModelList.add(new VediosModel(R.drawable.beautiful,"Beautiful People","Ed Shereen,khalid","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Beautiful%20People%20feat%20Khalid%20Official%20Video_360p.mp4?alt=media&token=1a24efe0-e586-4a03-a687-befb205f48f6"));
-        vediosModelList.add(new VediosModel(R.drawable.binidnglights,"Blinding Nights","Ed Shereen","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
-        vediosModelList.add(new VediosModel(R.drawable.senoritaaa,"Senorita","Shawn Mendes,Camila ca..","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Shawn%20Mendes%20Camila%20Cabello%20%20Se%C3%B1orita_360p.mp4?alt=media&token=987ce87b-0154-46f8-9182-c3ea05cdcae5"));
-        vediosModelList.add(new VediosModel(R.drawable.ringtone,"RingTone","Preetinder","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20RINGTONE%20%20Jannat%20Zubair%20%20Siddharth%20Nigam%20%20Preetinder%20%20Rajat%20Nagpal%20%20Vicky%20Sandhu%20%20Anshul%20Garg_360p.mp4?alt=media&token=ef833625-fce9-464f-8555-71f3fff54bad"));
-        vediosModelList.add(new VediosModel(R.drawable.ghungrooooo,"Ghungroo","Arjith Singh,Vish..","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ghungroo%20Song%20%20WAR%20%20Hrithik%20Roshan%20Vaani%20Kapoor%20%20Arijit%20Singh%20Shilpa%20%20Vishal%20%20Shekhar%20Kumaar_v240P.mp4?alt=media&token=c3618cc0-0d8e-4f43-bdb9-e6fcba1b3e5a"));
-        vediosModelList.add(new VediosModel(R.drawable.goabeach,"Goa Beach","Tony Kakkar,Neha k..","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20GOA%20BEACH%20%20Tony%20Kakkar%20%20Neha%20Kakkar%20%20Aditya%20Narayan%20%20Kat%20%20Anshul%20Garg%20%20Latest%20Hindi%20Song%202020_v240P.mp4?alt=media&token=6aff76f0-6abd-4db6-ac6b-c90be5814eb6"));
-        vediosModelList.add(new VediosModel(R.drawable.jannath,"Jannath","Ed Shereen","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
-        vediosModelList.add(new VediosModel(R.drawable.yummy,"Yummy","Justin Beiber","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Beautiful%20People%20feat%20Khalid%20Official%20Video_360p.mp4?alt=media&token=1a24efe0-e586-4a03-a687-befb205f48f6"));
-        vediosModelList.add(new VediosModel(R.drawable.galkarke,"Gal Karke","Asees Kaur","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
-        vediosModelList.add(new VediosModel(R.drawable.jonasbrothers,"Sucker","Jonas Brother","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ghungroo%20Song%20%20WAR%20%20Hrithik%20Roshan%20Vaani%20Kapoor%20%20Arijit%20Singh%20Shilpa%20%20Vishal%20%20Shekhar%20Kumaar_v240P.mp4?alt=media&token=c3618cc0-0d8e-4f43-bdb9-e6fcba1b3e5a"));
-        vediosModelList.add(new VediosModel(R.drawable.lehenga,"Lehenga","Ed Shereen","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Lehanga%20%20Jass%20Manak%20Official%20Video%20Satti%20Dhillon%20%20Latest%20Punjabi%20Songs%20%20GK%20DIGITAL%20%20Geet%20MP3_v240P.mp4?alt=media&token=31a4ed02-edee-4b42-8342-3b871ce4b976"));
-        vediosModelList.add(new VediosModel(R.drawable.kalla,"Kalla Sohna Nai","Neha Kakkar","https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Lehanga%20%20Jass%20Manak%20Official%20Video%20Satti%20Dhillon%20%20Latest%20Punjabi%20Songs%20%20GK%20DIGITAL%20%20Geet%20MP3_v240P.mp4?alt=media&token=31a4ed02-edee-4b42-8342-3b871ce4b976"));
+        vediosModelList.add(new VediosModel(R.drawable.beautiful, "Beautiful People", "Ed Shereen,khalid", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Beautiful%20People%20feat%20Khalid%20Official%20Video_360p.mp4?alt=media&token=1a24efe0-e586-4a03-a687-befb205f48f6"));
+        vediosModelList.add(new VediosModel(R.drawable.binidnglights, "Blinding Nights", "Ed Shereen", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
+        vediosModelList.add(new VediosModel(R.drawable.senoritaaa, "Senorita", "Shawn Mendes,Camila ca..", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Shawn%20Mendes%20Camila%20Cabello%20%20Se%C3%B1orita_360p.mp4?alt=media&token=987ce87b-0154-46f8-9182-c3ea05cdcae5"));
+        vediosModelList.add(new VediosModel(R.drawable.ringtone, "RingTone", "Preetinder", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20RINGTONE%20%20Jannat%20Zubair%20%20Siddharth%20Nigam%20%20Preetinder%20%20Rajat%20Nagpal%20%20Vicky%20Sandhu%20%20Anshul%20Garg_360p.mp4?alt=media&token=ef833625-fce9-464f-8555-71f3fff54bad"));
+        vediosModelList.add(new VediosModel(R.drawable.ghungrooooo, "Ghungroo", "Arjith Singh,Vish..", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ghungroo%20Song%20%20WAR%20%20Hrithik%20Roshan%20Vaani%20Kapoor%20%20Arijit%20Singh%20Shilpa%20%20Vishal%20%20Shekhar%20Kumaar_v240P.mp4?alt=media&token=c3618cc0-0d8e-4f43-bdb9-e6fcba1b3e5a"));
+        vediosModelList.add(new VediosModel(R.drawable.goabeach, "Goa Beach", "Tony Kakkar,Neha k..", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20GOA%20BEACH%20%20Tony%20Kakkar%20%20Neha%20Kakkar%20%20Aditya%20Narayan%20%20Kat%20%20Anshul%20Garg%20%20Latest%20Hindi%20Song%202020_v240P.mp4?alt=media&token=6aff76f0-6abd-4db6-ac6b-c90be5814eb6"));
+        vediosModelList.add(new VediosModel(R.drawable.jannath, "Jannath", "Ed Shereen", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
+        vediosModelList.add(new VediosModel(R.drawable.yummy, "Yummy", "Justin Beiber", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Beautiful%20People%20feat%20Khalid%20Official%20Video_360p.mp4?alt=media&token=1a24efe0-e586-4a03-a687-befb205f48f6"));
+        vediosModelList.add(new VediosModel(R.drawable.galkarke, "Gal Karke", "Asees Kaur", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ed%20Sheeran%20%20Afterglow%20Official%20Performance%20Video_360p.mp4?alt=media&token=cb4ffc5c-621c-430f-9e17-96eea9642fbe"));
+        vediosModelList.add(new VediosModel(R.drawable.jonasbrothers, "Sucker", "Jonas Brother", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Ghungroo%20Song%20%20WAR%20%20Hrithik%20Roshan%20Vaani%20Kapoor%20%20Arijit%20Singh%20Shilpa%20%20Vishal%20%20Shekhar%20Kumaar_v240P.mp4?alt=media&token=c3618cc0-0d8e-4f43-bdb9-e6fcba1b3e5a"));
+        vediosModelList.add(new VediosModel(R.drawable.lehenga, "Lehenga", "Ed Shereen", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Lehanga%20%20Jass%20Manak%20Official%20Video%20Satti%20Dhillon%20%20Latest%20Punjabi%20Songs%20%20GK%20DIGITAL%20%20Geet%20MP3_v240P.mp4?alt=media&token=31a4ed02-edee-4b42-8342-3b871ce4b976"));
+        vediosModelList.add(new VediosModel(R.drawable.kalla, "Kalla Sohna Nai", "Neha Kakkar", "https://firebasestorage.googleapis.com/v0/b/signin-ed6f6.appspot.com/o/yt1s.com%20-%20Lehanga%20%20Jass%20Manak%20Official%20Video%20Satti%20Dhillon%20%20Latest%20Punjabi%20Songs%20%20GK%20DIGITAL%20%20Geet%20MP3_v240P.mp4?alt=media&token=31a4ed02-edee-4b42-8342-3b871ce4b976"));
 
     }
 
@@ -175,7 +174,7 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
 
     private void setPopularEnglishData() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, RecyclerView.HORIZONTAL, false);
-        PopularEnglishAdapter popularEnglishAdapter = new PopularEnglishAdapter(popularEnglishModelList,this);
+        PopularEnglishAdapter popularEnglishAdapter = new PopularEnglishAdapter(popularEnglishModelList, this);
         EnglishRecycler.setLayoutManager(gridLayoutManager);
         EnglishRecycler.setAdapter(popularEnglishAdapter);
     }
@@ -291,29 +290,29 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
     private void setData() {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        HindiSongsAdapter hindiSongsAdapter = new HindiSongsAdapter(hindiModelList,this);
+        HindiSongsAdapter hindiSongsAdapter = new HindiSongsAdapter(hindiModelList, this);
         HindiRecycler.setLayoutManager(linearLayoutManager);
         HindiRecycler.setAdapter(hindiSongsAdapter);
 
     }
 
     private void buildHindiSongsData() {
-        hindiModelList.add(new HindiModel(R.drawable.filhaal, "Filhaal", "251M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "256M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "51M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "31M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "51M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.pachtaoge, "Pachtaoge", "301M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.sansein, "Batein", "651M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.shaayad, "Shayad", "500M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.tumhiaana, "Tumhi Aana", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.vaaste, "Vaaste", "251M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "461M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "351M+ Plays"));
+        hindiModelList.add(new HindiModel(R.drawable.filhaal, "Filhaal", "251M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "256M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "51M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "31M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "51M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.pachtaoge, "Pachtaoge", "301M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.sansein, "Batein", "651M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.shaayad, "Shayad", "500M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.tumhiaana, "Tumhi Aana", "351M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.vaaste, "Vaaste", "251M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "461M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "351M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "351M+ Plays", R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "351M+ Plays", R.raw.uddgaye));
 
     }
 
@@ -352,8 +351,17 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
     @Override
     public void OnItemClicked(PopularEnglishModel englishModel) {
         Intent intent = new Intent(getContext(), DummyActivity.class);
-        intent.putExtra("album",englishModel.getIvEnglishSong());
-        intent.putExtra("name",englishModel.getTvEnglishSongName());
+        intent.putExtra("album", englishModel.getIvEnglishSong());
+        intent.putExtra("name", englishModel.getTvEnglishSongName());
+        startActivity(intent);
+    }
+
+    @Override
+    public void OnHindiSongClicked(HindiModel hindiModel) {
+        Intent intent = new Intent(getContext(), PlayTheSongActivity.class);
+        intent.putExtra("songImage",hindiModel.getIvHindiSong());
+        intent.putExtra("songName",hindiModel.getTvHindiSongName());
+        intent.putExtra("id",hindiModel.getSongId());
         startActivity(intent);
     }
 

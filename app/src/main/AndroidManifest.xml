@@ -3,6 +3,8 @@
     package="com.example.project_gaana">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
         android:allowBackup="true"
@@ -11,23 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
-        <activity android:name=".activities.GaanaVideoActivity"></activity>
-        <activity android:name=".activities.PlayMusicActivity"></activity>
-        <activity android:name=".activities.DummyActivity" />
-        <activity android:name=".activities.MyHotShots"></activity>
-        <activity android:name=".activities.HotshotsActivity"></activity>
-        <activity android:name=".activities.SearchSongActivity"></activity>
-        <activity android:name=".activities.EnterNumber"></activity>
-        <activity android:name=".activities.SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true"></service>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".PlayTheSongActivity">
+
         </activity>
-
+        <activity android:name=".activities.GaanaVideoActivity" />
+        <activity android:name=".activities.PlayMusicActivity" />
+        <activity android:name=".activities.DummyActivity" />
+        <activity android:name=".activities.MyHotShots" />
+        <activity android:name=".activities.HotshotsActivity" />
+        <activity android:name=".activities.SearchSongActivity" />
+        <activity android:name=".activities.EnterNumber" />
+        <activity android:name=".activities.SplashScreen"></activity>
         <activity android:name=".activities.ContinueWithPhoneNumber" />
-
         <activity android:name=".activities.SettingsActivity" />
 
         <service
@@ -37,31 +39,26 @@
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- </activity> -->
-
-            android:exported="true" />
-        <!--        <activity android:name=".activities.MainActivity">-->
-        <!--            <intent-filter>-->
-        <!--                <action android:name="android.intent.action.MAIN" />-->
-        <!--        </activity>-->
-
-
-
-
-            android:exported="true" /> <!-- <activity android:name=".activities.MainActivity"> -->
+        <!-- <activity android:name=".activities.MainActivity"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- </activity> -->
-
+        <!-- <activity android:name=".activities.MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- </activity> -->
         <service
             android:name=".services.Empty"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

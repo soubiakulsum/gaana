@@ -5,8 +5,9 @@ public class HindiModel {
     private int ivHindiSong;
     private String tvHindiSongName;
     private String tvHindiDownloads;
+    private int songId;
 
-    public HindiModel(int ivHindiSong, String tvHindiSongName, String tvHindiDownloads) {
+    public HindiModel(int ivHindiSong, String tvHindiSongName, String tvHindiDownloads,int songId) {
         this.ivHindiSong = ivHindiSong;
         this.tvHindiSongName = tvHindiSongName;
         this.tvHindiDownloads = tvHindiDownloads;
@@ -22,5 +23,9 @@ public class HindiModel {
 
     public String getTvHindiDownloads() {
         return tvHindiDownloads;
+    }
+
+    public int getSongId(){
+        return songId;
     }
 }

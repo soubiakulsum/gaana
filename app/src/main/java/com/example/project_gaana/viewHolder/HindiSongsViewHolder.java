@@ -36,7 +36,7 @@ public class HindiSongsViewHolder extends RecyclerView.ViewHolder {
         ivHindiSong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                onItemClicked.OnHindiSongClicked(hindiModel);
+                onItemClicked.OnHindiSongClicked(hindiModel);
             }
         });
     }
