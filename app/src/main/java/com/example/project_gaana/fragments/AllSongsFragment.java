@@ -17,6 +17,7 @@ import com.example.project_gaana.OnItemClicked;
 import com.example.project_gaana.PlayTheSongActivity;
 import com.example.project_gaana.R;
 import com.example.project_gaana.activities.DummyActivity;
+import com.example.project_gaana.activities.PlaySongMusicActivity;
 import com.example.project_gaana.adapter.DiscoverAdapter;
 import com.example.project_gaana.adapter.HindiSongsAdapter;
 import com.example.project_gaana.adapter.PicksAdapter;
@@ -358,7 +359,7 @@ public class AllSongsFragment extends Fragment implements OnItemClicked {
 
     @Override
     public void OnHindiSongClicked(HindiModel hindiModel) {
-        Intent intent = new Intent(getContext(), PlayTheSongActivity.class);
+        Intent intent = new Intent(getContext(), PlaySongMusicActivity.class);
         intent.putExtra("songImage",hindiModel.getIvHindiSong());
         intent.putExtra("songName",hindiModel.getTvHindiSongName());
         intent.putExtra("id",hindiModel.getSongId());
