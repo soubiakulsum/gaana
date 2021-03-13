@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
-        <activity android:name=".activities.PlaySongMusicActivity"></activity>
+        <activity android:name=".activities.Otp_page"></activity>
+        <activity android:name=".activities.Phone_Authentication" />
+        <activity android:name=".activities.PlaySongMusicActivity" />
         <activity android:name=".activities.PlayHindiMusicActivity" />
         <activity android:name=".activities.HindiDummyActivity" />
         <activity android:name=".activities.GaanaVideoActivity" />
@@ -53,7 +55,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>

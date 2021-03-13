@@ -20,7 +20,7 @@ public class ContinueWithPhoneNumber extends AppCompatActivity {
         mBTNContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ContinueWithPhoneNumber.this,EnterNumber.class);
+                Intent intent = new Intent(ContinueWithPhoneNumber.this,Phone_Authentication.class);
                 startActivity(intent);
             }
         });
