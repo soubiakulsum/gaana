@@ -7,5 +7,5 @@ public interface OnItemClicked {
 
     void OnItemClicked(PopularEnglishModel englishModel);
 
-//    void OnHindiSongClicked(HindiModel hindiModel);
+    void OnHindiSongClicked(HindiModel hindiModel);
 }

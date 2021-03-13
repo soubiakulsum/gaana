@@ -1,6 +1,9 @@
 package com.example.project_gaana.fragments;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,15 +12,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.project_gaana.OnItemClicked;
 import com.example.project_gaana.R;
 import com.example.project_gaana.adapter.DiscoverAdapter;
 import com.example.project_gaana.adapter.HindiSongsAdapter;
-import com.example.project_gaana.adapter.PicksAdapter;
 import com.example.project_gaana.adapter.PodcastAdapter;
 import com.example.project_gaana.adapter.PopularEnglishAdapter;
 import com.example.project_gaana.adapter.RadioAdapter;
@@ -30,7 +28,6 @@ import com.example.project_gaana.model.PodcatsModel;
 import com.example.project_gaana.model.PopularEnglishModel;
 import com.example.project_gaana.model.RadioModel;
 import com.example.project_gaana.model.TopChartsModel;
-import com.example.project_gaana.model.TopPicksModel;
 import com.example.project_gaana.model.TrendingSongsModel;
 import com.example.project_gaana.model.VediosModel;
 
@@ -286,22 +283,22 @@ public class EnglishFragment extends Fragment implements OnItemClicked {
     }
 
     private void buildHindiSongsData() {
-        hindiModelList.add(new HindiModel(R.drawable.filhaal, "Filhaal", "251M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "256M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "51M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "31M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "51M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.pachtaoge, "Pachtaoge", "301M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.sansein, "Batein", "651M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.shaayad, "Shayad", "500M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.tumhiaana, "Tumhi Aana", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.vaaste, "Vaaste", "251M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "461M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "351M+ Plays"));
-        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "351M+ Plays"));
+        hindiModelList.add(new HindiModel(R.drawable.filhaal, "Filhaal", "251M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "256M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "51M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "31M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "51M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.pachtaoge, "Pachtaoge", "301M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.sansein, "Batein", "651M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.shaayad, "Shayad", "500M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.tumhiaana, "Tumhi Aana", "351M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.vaaste, "Vaaste", "251M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.ghungrooooo, "Ghungroo", "351M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.bekhayali, "Bekhayali", "461M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.gaanalokdhun, "Dollar Gandh..", "351M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.garmi, "Garmi", "351M+ Plays",R.raw.uddgaye));
+        hindiModelList.add(new HindiModel(R.drawable.lugaye, "Lut Gaye", "351M+ Plays",R.raw.uddgaye));
 
     }
 
@@ -318,6 +315,11 @@ public class EnglishFragment extends Fragment implements OnItemClicked {
 
     @Override
     public void OnItemClicked(PopularEnglishModel englishModel) {
+
+    }
+
+    @Override
+    public void OnHindiSongClicked(HindiModel hindiModel) {
 
     }
 

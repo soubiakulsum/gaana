@@ -3,11 +3,9 @@ package com.example.project_gaana.viewHolder;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,9 +24,6 @@ public class TrendingEnglishSongHolder extends RecyclerView.ViewHolder {
     ConstraintLayout mcvPlayMusic;
 
     ItemClickListeners itemClickListeners;
-
-
-
 
 
     public TrendingEnglishSongHolder(@NonNull View itemView, ItemClickListeners itemClickListeners) {
