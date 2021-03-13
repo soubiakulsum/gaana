@@ -22,6 +22,8 @@ public class ContinueWithPhoneNumber extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ContinueWithPhoneNumber.this,Phone_Authentication.class);
                 startActivity(intent);
+
+                ///xxx
             }
         });
 
