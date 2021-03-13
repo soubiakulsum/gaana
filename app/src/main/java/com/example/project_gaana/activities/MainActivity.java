@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
         Mnavi4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AddMusic();
                 Mnavi1.setImageResource(R.drawable.ic_home);
                 Mnavi2.setImageResource(R.drawable.ic_hotshots__4_);
                 Mnavi3.setImageResource(R.drawable.ic_flash_symbol);

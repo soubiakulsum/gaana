@@ -13,10 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_gaana">
+        <activity android:name=".activities.GetOTP"></activity>
+        <activity android:name=".activities.GaanaVideoActivity" />
+        <activity android:name=".activities.PlayMusicActivity" />
+        <activity android:name=".activities.DummyActivity" />
+        <activity android:name=".activities.MyHotShots" />
+        <activity android:name=".activities.HotshotsActivity" />
+        <activity android:name=".activities.SearchSongActivity" />
+        <activity android:name=".activities.EnterNumber" />
+        <activity android:name=".activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
         <service
             android:name=".MusicService"
             android:enabled="true"
             android:exported="true"></service>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         <activity android:name=".PlayTheSongActivity">
 
@@ -30,6 +44,15 @@
         <activity android:name=".activities.EnterNumber" />
         <activity android:name=".activities.SplashScreen"></activity>
         <activity android:name=".activities.ContinueWithPhoneNumber" />
+
+
+        </activity> <!-- <activity android:name=".activities.PlayMusicActivity" /> -->
+        <!-- <activity android:name=".activities.DummyActivity" /> -->
+        <!-- <activity android:name=".activities.MyHotShots" /> -->
+        <!-- <activity android:name=".activities.ContinueWithPhoneNumber" /> -->
+        <!-- <activity android:name=".activities.HotshotsActivity" /> -->
+        <!-- <activity android:name=".activities.SearchSongActivity" /> -->
+
         <activity android:name=".activities.SettingsActivity" />
 
         <service
@@ -39,6 +62,25 @@
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- </activity> -->
+
+
+            android:exported="true" />
+        <!--        <activity android:name=".activities.MainActivity">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--        </activity>-->
+
+
+
+
+            android:exported="true" /> <!-- <activity android:name=".activities.MainActivity"> -->
+
+        <!-- <activity android:name=".activities.MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- </activity> -->
+       <!-- <activity android:name=".activities.MainActivity"> -->
+
         <!-- <activity android:name=".activities.MainActivity"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -52,6 +94,8 @@
             android:enabled="true"
             android:exported="true" />
 
+
+        <activity android:name=".activities.MainActivity">
         <activity android:name=".activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,6 +103,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+
     </application>
 
 </manifest>
