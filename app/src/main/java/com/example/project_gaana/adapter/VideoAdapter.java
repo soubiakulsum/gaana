@@ -1,10 +1,13 @@
 package com.example.project_gaana.adapter;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -56,6 +59,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.myviewholder
             title=itemView.findViewById(R.id.textVideoTitle);
             desc=itemView.findViewById(R.id.textVideoDescription);
             pbar=itemView.findViewById(R.id.videoProgressBar);
+
 
             title.setEllipsize(TextUtils.TruncateAt.MARQUEE);
             title.setSelected(true);
