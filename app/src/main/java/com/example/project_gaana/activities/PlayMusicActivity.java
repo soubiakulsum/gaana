@@ -1,7 +1,4 @@
 package com.example.project_gaana.activities;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
@@ -15,51 +12,37 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.project_gaana.R;
 
 import java.io.IOException;
-
 public class PlayMusicActivity extends AppCompatActivity {
-
     ImageView ivGetImage;
-
     private ImageView mButtonResume;
     private ImageView mButtonStop;
-
     ImageView ivPlay;
     private SeekBar mSeekBar;
-
     private TextView mPass;
     private TextView mDuration;
     private TextView mDue;
-
     private Context mContext;
     private Activity mActivity;
-//    ItemClickListeners itemClickListeners;
-
+    //    ItemClickListeners itemClickListeners;
     ImageView btnPlayMusic;
-
     ImageView btnPauseMusic;
-
     private MediaPlayer mPlayer;
     private Handler mHandler;
     private Runnable mRunnable;
-
     private TextView tvGetSongName;
-
     private TextView tvSingerName;
-
     int length;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_music);
-
         mContext = getApplicationContext();
         mActivity = PlayMusicActivity.this;
-
         ivGetImage = findViewById(R.id.GetSongImage);
         mSeekBar = findViewById(R.id.seek_bar);
         mButtonResume = findViewById(R.id.btn_res);
@@ -72,23 +55,16 @@ public class PlayMusicActivity extends AppCompatActivity {
         btnPauseMusic = findViewById(R.id.btn_pausemusic);
         tvSingerName = findViewById(R.id.SingerName);
 //
-
         ivGetImage.setImageResource(getIntent().getIntExtra("image", 0));
-
         tvGetSongName.setText(getIntent().getStringExtra("songName"));
-
         tvSingerName.setText(getIntent().getStringExtra("songName") + " by " + getIntent().getStringExtra("singerName"));
         tvSingerName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         tvSingerName.setSelected(true);
-
-
         String uri = (String) getIntent().getExtras().get("url");
         mHandler = new Handler();
         btnPlayMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 btnPlayMusic.setVisibility(View.GONE);
                 btnPauseMusic.setVisibility(View.VISIBLE);
                 stopPlaying();
@@ -103,46 +79,33 @@ public class PlayMusicActivity extends AppCompatActivity {
                 mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 mPlayer.start();
                 Toast.makeText(v.getContext(), "Media Player is playing.", Toast.LENGTH_SHORT).show();
-
                 getAudioStats();
                 initializeSeekBar();
-
             }
-
         });
-
         btnPauseMusic.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
             public void onClick(View view) {
                 btnPauseMusic.setVisibility(View.GONE);
                 btnPlayMusic.setVisibility(View.VISIBLE);
-
-
                 mPlayer.pause();
                 length = mPlayer.getCurrentPosition();
             }
         });
-
         mButtonResume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 mButtonResume.setVisibility(View.GONE);
                 mButtonStop.setVisibility(View.VISIBLE);
-
                 mPlayer.seekTo(length);
                 mPlayer.start();
             }
         });
-
         mButtonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mButtonStop.setVisibility(View.GONE);
                 mButtonResume.setVisibility(View.VISIBLE);
-
                 stopPlaying();
             }
         });
@@ -153,19 +116,14 @@ public class PlayMusicActivity extends AppCompatActivity {
                     mPlayer.seekTo(i * 1000);
                 }
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
     }
-
-
-
     protected void stopPlaying() {
         if (mPlayer != null) {
             mPlayer.stop();
@@ -177,7 +135,6 @@ public class PlayMusicActivity extends AppCompatActivity {
             }
         }
     }
-
     protected void getAudioStats() {
         int duration = mPlayer.getDuration() / 1000; // In milliseconds
         int due = (mPlayer.getDuration() - mPlayer.getCurrentPosition()) / 1000;
@@ -186,7 +143,6 @@ public class PlayMusicActivity extends AppCompatActivity {
         mDuration.setText("" + duration + " seconds");
         mDue.setText("" + due + " seconds");
     }
-
     protected void initializeSeekBar() {
         mSeekBar.setMax(mPlayer.getDuration() / 1000);
         mRunnable = new Runnable() {
