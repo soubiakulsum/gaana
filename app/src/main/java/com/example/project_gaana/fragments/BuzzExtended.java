@@ -43,12 +43,15 @@ public class BuzzExtended extends Fragment {
 
 
 
+
     }
 
     private void initViews(View view) {
         like = view.findViewById(R.id.tvbuzzlike1);
         article = view.findViewById(R.id.tvbuzzarticle);
         days = view.findViewById(R.id.tvtwodaysago);
+
+        //xyz
 
     }
 
